@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Work_Sans, Raleway } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
