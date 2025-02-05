@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${workSans.variable} ${raleway.variable} antialiased`}
+        className={`${workSans.variable} ${raleway.variable} antialiased font-work_sans`}
       >
         {children}
       </body>
