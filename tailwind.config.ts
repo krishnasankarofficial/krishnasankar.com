@@ -15,6 +15,29 @@ export default {
       fontFamily: {
         work_sans: "var(--font-work-sans)",
         raleway: "var(--font-raleway)",
+        sofia: "var(--font-sofia)",
+      },
+      animation: {
+        glow: "glow 2s ease-in forwards",
+        "white-to-black": "white-to-black 1s ease-in forwards",
+      },
+      keyframes: {
+        glow: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          }
+        },
+        'white-to-black': {
+          "0%": {
+            color: "white",
+          },
+          "100%": {
+            color: "black",
+          }
+        },
       }
     },
   },
