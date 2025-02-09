@@ -16,6 +16,7 @@ export default {
         work_sans: "var(--font-work-sans)",
         raleway: "var(--font-raleway)",
         anthony: "var(--font-anthony)",
+        sofia: "var(--font-sofia)",
       },
       animation: {
         'scale_n_glow': "scale_n_glow 2s ease-in-out forwards",

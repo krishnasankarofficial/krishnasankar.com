@@ -1,4 +1,5 @@
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import Image from "next/image";
 
 export default function Home() {
   return (
