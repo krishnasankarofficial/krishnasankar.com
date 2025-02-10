@@ -22,7 +22,7 @@ export default function Header() {
                     <Link href={'/'}>Contact</Link> */}
                 </div>
                 <div className="w-1/2 flex items-center justify-center">
-                    <Link href={''} className="text-4xl ml-6 font-anthony translate-y-1">Krishnasankar</Link>
+                    <Link href={'/'} className="text-4xl ml-6 font-anthony translate-y-1">Krishnasankar</Link>
                 </div>
                 <div className="w-1/2 flex items-center justify-end z-50">
                     <Link

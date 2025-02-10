@@ -49,13 +49,13 @@ export default function Hero() {
       >
         <Link
           href="#contact"
-          className="px-6 py-3 bg-transparent border-2 border-black  font-medium rounded-xl hover:bg-gradient-to-t from-black to-gray-800 hover:text-white transition shadow-xl duration-300"
+          className="px-6 py-3 bg-transparent border-2 border-black  font-medium rounded-full hover:bg-gradient-to-t from-black to-gray-800 hover:text-white transition-all shadow-xl duration-300"
         >
           Contact Me
         </Link>
         <Link
           href="#portfolio"
-          className="px-6 py-3 bg-gradient-to-t from-black to-gray-800 text-white font-medium rounded-xl hover:bg-black transition shadow-xl"
+          className="px-6 py-3 bg-gradient-to-t from-black to-gray-800 text-white font-medium rounded-full hover:bg-black transition shadow-xl"
         >
           View Portfolio
         </Link>
