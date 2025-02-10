@@ -45,16 +45,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${workSans.variable} ${raleway.variable} ${sofia.variable} antialiased font-work_sans relative overflow-hidden`}
-        className={`${workSans.variable} ${raleway.variable} ${anthony.variable} w-screen h-screen antialiased font-work_sans flex flex-col items-center justify-between gap-4`}
+        className={`${workSans.variable} ${raleway.variable} ${sofia.variable} ${anthony.variable} antialiased font-work_sans relative overflow-x-hidden`}
       >
         <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-green-500 to-cyan-500 -z-10 rounded-xl blur-3xl animate-glow"></div>
         <Header />
-        <main>
-          {children}
-        </main>
-        <Header />
-        <main className="flex-1 mt-20">
+        <main className="flex-1 pt-10">
           {children}
         </main>
         <Footer />
