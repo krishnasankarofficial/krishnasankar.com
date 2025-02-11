@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
@@ -23,14 +23,26 @@ export default function Slider() {
   };
 
   // Auto-scroll every 3 seconds
-//   useEffect(() => {
-//     const interval = setInterval(handleNext, 5000);
-//     return () => clearInterval(interval);
-//   }, []);
+  useEffect(() => {
+    const interval = setInterval(handleNext, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <div className="relative flex items-center justify-center w-4/5 h-64 perspective">
+        <button
+          onClick={handlePrev}
+          className="absolute left-0 top-1/2 -translate-y-1/2"
+        >
+          <Image 
+            src={'/images/right.png'}
+            width={80}
+            height={80}
+            alt="Right"
+            className="rotate-180"
+          />
+        </button>
         <AnimatePresence>
           {works.map((work, index) => {
             const position = index - currentIndex;
@@ -47,7 +59,7 @@ export default function Slider() {
             return (
               <motion.div
                 key={work.id}
-                className={`absolute w-96 h-72 bg-white rounded-xl shadow-lg flex items-center justify-center text-xl cursor-pointer object-cover`}
+                className={`absolute w-[50%] h-auto bg-white rounded-3xl shadow-lg flex items-center justify-center text-xl cursor-pointer object-cover`}
                 initial={{ scale: 0.8, x: adjustedPosition * 200, opacity: 1 }}
                 animate={{
                   scale: scale,
@@ -59,29 +71,25 @@ export default function Slider() {
               >
                 <Image 
                     src={'/images/image.png'}
-                    width={500}
-                    height={500}
+                    width={1000}
+                    height={1000}
                     alt="Work"
-                    className="w-full h-full rounded-xl"
+                    className="w-full h-full rounded-3xl"
                 />
               </motion.div>
             );
           })}
         </AnimatePresence>
-      </div>
-
-      <div className="mt-8 space-x-2">
-        <button
-          onClick={handlePrev}
-          className="w-8 h-8 bg-gradient-to-t from-black to-gray-700 text-white rounded-full hover:bg-[#7978783b]"
-        >
-          <ArrowLeft style={{fontSize:20}}/>
-        </button>
         <button
           onClick={handleNext}
-          className="w-8 h-8 bg-gradient-to-t from-black to-gray-700 text-white rounded-full hover:bg-[#7978783b]"
+          className="absolute right-0 top-1/2 -translate-y-1/2"
         >
-          <ArrowRight style={{fontSize:20}}/>
+          <Image 
+            src={'/images/right.png'}
+            width={80}
+            height={80}
+            alt="Right"
+          />
         </button>
       </div>
     </div>
