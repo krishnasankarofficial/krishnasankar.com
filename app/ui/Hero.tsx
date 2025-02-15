@@ -13,6 +13,12 @@ export default function Hero() {
 
   return (
     <section ref={ref} className="relative w-full h-screen flex flex-col items-center justify-center text-center animate-white-to-black z-0">
+      {/* <Image
+        src={'/images/webdev.svg'}
+        width={500}
+        height={500}
+        alt="Web dev"
+        className="absolute top-1/2 -translate-y-1/2 -left-32 -z-10" /> */}
       {isInView && (
         <>
           <Greeting />
@@ -51,13 +57,13 @@ export default function Hero() {
           >
             <Link
               href="#contact"
-              className="px-6 py-3 bg-transparent border border-black font-medium rounded-full hover:bg-gradient-to-t hover:from-black hover:to-gray-800 hover:text-white transition-all shadow-xl duration-300"
+              className="px-6 py-3 bg-transparent border border-black font-medium rounded-full hover:bg-gradient-to-t hover:from-black hover:to-gray-800 hover:text-white hover:scale-110 shadow-xl duration-300"
             >
               Contact Me
             </Link>
             <Link
               href="#portfolio"
-              className="px-6 py-3 bg-gradient-to-t from-black to-gray-800  text-white font-medium rounded-full hover:bg-black transition shadow-xl"
+              className="px-6 py-3 bg-gradient-to-t from-black to-gray-800  text-white font-medium rounded-full hover:bg-black hover:scale-110 duration-300 shadow-xl"
             >
               View Portfolio
             </Link>

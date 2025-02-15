@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight } from "@mui/icons-material";
 
 const works = [
   { id: 1, title: "Work 1" },
@@ -40,7 +39,7 @@ export default function Slider() {
             width={80}
             height={80}
             alt="Right"
-            className="rotate-180"
+            className="rotate-180 hover:scale-110 duration-300  hover:-translate-x-2"
           />
         </button>
         <AnimatePresence>
@@ -89,6 +88,7 @@ export default function Slider() {
             width={80}
             height={80}
             alt="Right"
+            className="hover:scale-110 duration-300 hover:translate-x-2"
           />
         </button>
       </div>

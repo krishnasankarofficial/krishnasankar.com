@@ -21,6 +21,7 @@ export default {
       animation: {
         'scale_n_glow': "scale_n_glow 2s ease-in-out forwards",
         'white_to_black': "white_to_black 4.5s ease-in-out forwards",
+        'slideUp': "slideUp 1.5s ease-in forwards",
       },
       keyframes: {
         scale_n_glow: {
@@ -31,6 +32,10 @@ export default {
           "0%": { color: 'black' },
           "100%": { color: 'black' },
         },
+        slideUp: {
+          "0%": { transform: "translateY(500px)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        }
       },
     },
   },

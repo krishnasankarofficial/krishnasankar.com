@@ -27,14 +27,14 @@ export default function StayHead() {
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
                         className="text-center text-lg"
                         >
-                        I build
+                        I build 
                         <span className="relative mx-1 font-bold">
                             fast, powerful
                             <BoltOutlined className="absolute -top-2 left-0 text-green-400 opacity-80 -z-10" style={{fontSize:40}}/>
                         </span> 
-                        websites and apps that give you a competitive edge. 
+                        websites and apps that help you stay ahead of the game.
                         <br></br>
-                        Let’s create a digital experience that sets you apart.
+                        Let’s create something unique that makes you stand out!
                     </motion.p>
                     <div className="w-full h-full py-6">
                         <WorkSlider />

@@ -1,15 +1,12 @@
 "use client"
 
 import { motion, useInView } from "framer-motion";
-import { BoltOutlined } from '@mui/icons-material';
 import { useRef } from "react";
-import WorkSlider from "./WorkSlider";
-import Image from "next/image";
 import CardWithButton from "./CardWithButton";
 
 export default function Services() {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+    const isInView = useInView(ref, { once: false });
 
     return (
         <section ref={ref} className="w-full flex flex-col items-center justify-center gap-4 mt-12">
@@ -32,35 +29,50 @@ export default function Services() {
                         I ensure a seamless digital experience that keeps you <b className="ml-1">ahead of the competition</b>.
                     </motion.p>
                     <div className="w-full h-[450px] flex items-center justify-center py-6 px-32 gap-4">
-                        <div className="flex-1 h-full flex flex-col items-center justify-center">
+                        <motion.div 
+                            className="flex-1 h-full flex flex-col items-center justify-center"
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+                            >
                             <CardWithButton 
-                                title="Custom Website Development" 
-                                description="Building fully responsive and fast websites using Next.js, React, or other modern frameworks tailored to client needs." 
+                                title="Custom Websites" 
+                                description="Building fully responsive and fast websites using Next.js, React, or other modern frameworks tailored to your needs." 
                                 img="/images/web.jpg"
                                 main
                             />
-                        </div>
+                        </motion.div>
                         <div className="flex-1 h-full flex flex-col items-center justify-center gap-4">
-                            <div className="w-full h-full flex items-center justify-center gap-4">
-                                <CardWithButton 
-                                    title="E-commerce Development" 
-                                    description="Create online stores easily." 
+                            <motion.div 
+                                className="w-full h-full flex items-center justify-center gap-4"
+                                initial={{ opacity: 0, y: -50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+                                >
+                                <CardWithButton
+                                    title="E-commerce Stores" 
+                                    description="Create your online store easily with me." 
                                 />
                                 <CardWithButton 
                                     title="Website Optimization & SEO" 
-                                    description="Boost speed and ranking." 
+                                    description="Boost site speed and rise to the top of search results." 
                                 />
-                            </div>
-                            <div className="w-full h-full flex items-center justify-center gap-4">
+                            </motion.div>
+                            <motion.div 
+                                className="w-full h-full flex items-center justify-center gap-4"
+                                initial={{ opacity: 0, y: 50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, ease: "easeOut", delay: 1.0 }}
+                                >
                                 <CardWithButton 
                                     title="Maintenance & Support" 
-                                    description="Keep sites updated & secure." 
+                                    description="Keep sites up to date & secure." 
                                 />
                                 <CardWithButton 
                                     title="UI/UX Design & Prototyping" 
-                                    description="Design engaging interfaces." 
+                                    description="Designing and prototyping engaging interfaces." 
                                 />
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </>
