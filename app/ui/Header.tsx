@@ -11,9 +11,9 @@ export default function Header() {
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-                className="relative w-1/2 p-4 flex items-center justify-between rounded-full bg-white text-black bg-opacity-30 shadow-lg z-50"
+                className="relative w-1/2 p-4 flex items-center justify-between rounded-full bg-transparent text-black shadow-lg z-50 backdrop-blur-sm backdrop"
             >
-                {/* <div className="absolute top-0 left-0 w-full h-full bg-black opacity-20 rounded-full blur-sm z-50"></div> */}
+                {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-green-500 to-cyan-500 bg-opacity-30 rounded-full blur-sm z-10"></div> */}
                 <div className="w-1/2 flex items-center justify-start pl-2 gap-4">
                     <Image className="cursor-pointer" src={'/images/app.png'} width={35} height={35} alt="Menu" />
                 </div>
