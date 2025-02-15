@@ -15,7 +15,7 @@ const CardWithButton = ({
     <div className="relative w-full h-full bg-white rounded-3xl shadow-lg p-6 overflow-hidden cursor-pointer flex flex-col items-start justify-start hover:-translate-y-2 hover:scale-105 duration-300 group">
       {/* Card Content */}
       <h3 className={`font-bold mb-2 font-raleway ${main ? 'text-3xl' : 'text-lg'} z-10`}>{title}</h3>
-      <p className="text-gray-600 text-md z-10">
+      <p className="text-gray-600 text-md z-10 hyphens-auto break-words">
         {description}
       </p>
 

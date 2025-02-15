@@ -30,10 +30,10 @@ export default function Slider() {
 
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      <div className="relative flex items-center justify-center w-4/5 h-64 perspective">
+      <div className="relative flex items-center justify-center w-full h-64">
         <button
           onClick={handlePrev}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-40"
+          className="absolute left-16 top-1/2 -translate-y-1/2 z-40"
         >
           <Image 
             src={'/images/right.png'}
@@ -59,7 +59,7 @@ export default function Slider() {
             return (
               <motion.div
                 key={work.id}
-                className={`absolute w-[50%] h-auto bg-white rounded-3xl shadow-lg flex items-center justify-center text-xl cursor-pointer object-cover`}
+                className={`absolute w-[400px] h-auto bg-white rounded-3xl shadow-lg flex items-center justify-center text-xl cursor-pointer object-cover`}
                 initial={{ scale: 0.8, x: adjustedPosition * 200, opacity: 1 }}
                 animate={{
                   scale: scale,
@@ -82,7 +82,7 @@ export default function Slider() {
         </AnimatePresence>
         <button
           onClick={handleNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-40"
+          className="absolute right-16 top-1/2 -translate-y-1/2 z-40"
         >
           <Image 
             src={'/images/right.png'}

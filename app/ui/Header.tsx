@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "./Logo";
 
 export default function Header() {
     return (
@@ -18,7 +19,7 @@ export default function Header() {
                     <Image className="cursor-pointer" src={'/images/app.png'} width={35} height={35} alt="Menu" />
                 </div>
                 <div className="w-1/2 flex items-center justify-center">
-                    <Link href={'/'} className="text-4xl ml-6 font-anthony translate-y-1">Krishnasankar</Link>
+                    <Logo />
                 </div>
                 <div className="w-1/2 flex items-center justify-end z-50">
                     <Link
