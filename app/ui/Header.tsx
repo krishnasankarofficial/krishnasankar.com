@@ -6,12 +6,12 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header className="fixed top-10 w-full flex items-center justify-center z-50">
+        <header className="fixed top-4 w-full flex items-center justify-center z-50">
             <motion.div
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-                className="relative w-1/2 p-4 flex items-center justify-between rounded-full bg-transparent text-black shadow-lg z-50 backdrop-blur-sm backdrop"
+                className="relative w-1/2 p-4 flex items-center justify-between rounded-full bg-transparent text-dark shadow-lg z-50 backdrop-blur-sm backdrop"
             >
                 {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-green-500 to-cyan-500 bg-opacity-30 rounded-full blur-sm z-10"></div> */}
                 <div className="w-1/2 flex items-center justify-start pl-2 gap-4">

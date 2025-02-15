@@ -12,7 +12,7 @@ export default function Services() {
     const isInView = useInView(ref, { once: true });
 
     return (
-        <section ref={ref} className="w-full flex flex-col items-center justify-center gap-4 mt-40">
+        <section ref={ref} className="w-full flex flex-col items-center justify-center gap-4 mt-12">
             {isInView && (
                 <>
                     <motion.h2
@@ -30,27 +30,37 @@ export default function Services() {
                         className="text-center text-lg flex items-center justify-end relative"
                         >
                         I ensure a seamless digital experience that keeps you <b className="ml-1">ahead of the competition</b>.
-                        {/* <Image 
-                            src={'/images/arrow-up.png'}
-                            width={150}
-                            height={150}
-                            alt="Arrow up"
-                            className="absolute -top-24 -right-36"
-                        /> */}
                     </motion.p>
-                    <div className="w-full h-96 flex items-center justify-center py-6 px-32 gap-4">
+                    <div className="w-full h-[450px] flex items-center justify-center py-6 px-32 gap-4">
+                        <div className="flex-1 h-full flex flex-col items-center justify-center">
+                            <CardWithButton 
+                                title="Custom Website Development" 
+                                description="Building fully responsive and fast websites using Next.js, React, or other modern frameworks tailored to client needs." 
+                                img="/images/web.jpg"
+                                main
+                            />
+                        </div>
                         <div className="flex-1 h-full flex flex-col items-center justify-center gap-4">
                             <div className="w-full h-full flex items-center justify-center gap-4">
-                                <CardWithButton />
-                                <CardWithButton />
+                                <CardWithButton 
+                                    title="E-commerce Development" 
+                                    description="Create online stores easily." 
+                                />
+                                <CardWithButton 
+                                    title="Website Optimization & SEO" 
+                                    description="Boost speed and ranking." 
+                                />
                             </div>
                             <div className="w-full h-full flex items-center justify-center gap-4">
-                                <CardWithButton />
-                                <CardWithButton />
+                                <CardWithButton 
+                                    title="Maintenance & Support" 
+                                    description="Keep sites updated & secure." 
+                                />
+                                <CardWithButton 
+                                    title="UI/UX Design & Prototyping" 
+                                    description="Design engaging interfaces." 
+                                />
                             </div>
-                        </div>
-                        <div className="flex-1 h-full flex flex-col items-center justify-center">
-                            <CardWithButton />
                         </div>
                     </div>
                 </>

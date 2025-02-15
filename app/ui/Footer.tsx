@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="w-full h-screen flex items-center justify-between px-6  py-4">
+        <footer className="w-full mt-12 flex items-center justify-between px-6  py-4">
             <span>KS</span>
             <div className="flex items-center justify-between gap-4">
                 <Link href={'/'}>Home</Link>

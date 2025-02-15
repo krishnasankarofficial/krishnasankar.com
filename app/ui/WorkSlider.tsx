@@ -33,7 +33,7 @@ export default function Slider() {
       <div className="relative flex items-center justify-center w-4/5 h-64 perspective">
         <button
           onClick={handlePrev}
-          className="absolute left-0 top-1/2 -translate-y-1/2"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-40"
         >
           <Image 
             src={'/images/right.png'}
@@ -67,7 +67,7 @@ export default function Slider() {
                   opacity: isCenter ? 1 : 0.8,
                   zIndex: zIndex,
                 }}
-                transition={{ type: "spring", duration: 0.8, delay: 0.1 }}
+                transition={{ type: "spring", duration: 0.8, delay: 0.5 }}
               >
                 <Image 
                     src={'/images/image.png'}
@@ -82,7 +82,7 @@ export default function Slider() {
         </AnimatePresence>
         <button
           onClick={handleNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-40"
         >
           <Image 
             src={'/images/right.png'}

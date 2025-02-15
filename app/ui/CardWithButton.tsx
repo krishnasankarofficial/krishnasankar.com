@@ -1,37 +1,48 @@
-import React from "react";
+import Image from "next/image";
 
-const CardWithButton = () => {
+const CardWithButton = ({
+    title, 
+    description, 
+    main,
+    img,
+  } : {
+    title: string, 
+    description: string,
+    main?: boolean,
+    img?: string,
+  }) => {
   return (
-    <div className="relative w-full h-full bg-white rounded-3xl shadow-lg p-6 overflow-hidden">
+    <div className="relative w-full h-full bg-white rounded-3xl shadow-lg p-6 overflow-hidden cursor-pointer flex flex-col items-start justify-start hover:-translate-y-2 hover:scale-105 duration-300 group">
       {/* Card Content */}
-      <h3 className="text-lg font-semibold mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is some card content. It can be anything you want.
+      <h3 className={`font-bold mb-2 font-raleway ${main ? 'text-3xl' : 'text-lg'} z-10`}>{title}</h3>
+      <p className="text-gray-600 text-md z-10">
+        {description}
       </p>
 
-      {/* Cutout Section */}
-      <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-white rounded-full transform translate-x-1/2 translate-y-1/2"></div>
+      {/* Card Image */}
+      {img && (
+        <div className="w-full h-full flex items-center justify-center z-0">
+          <Image 
+            src={img}
+            width={300}
+            height={300}
+            alt="Service image"
+            className="object-cover opacity-100 -mt-12"
+          />
+        </div>
+      )}
 
       {/* Open Link Button */}
-      <a
-        href="#"
-        className="absolute -bottom-4 -right-4 bg-blue-500 text-white rounded-full p-3 shadow-lg hover:bg-blue-600 transition duration-300"
+      <div
+        className="absolute w-12 h-12 -bottom-2 -right-2 bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center group-hover:-translate-y-2 group-hover:-translate-x-2"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+        <Image 
+          src={'/images/arrow-up.png'}
+          width={25}
+          height={25}
+          alt="Arrow up"
           />
-        </svg>
-      </a>
+      </div>
     </div>
   );
 };

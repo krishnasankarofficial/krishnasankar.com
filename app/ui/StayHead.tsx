@@ -36,7 +36,7 @@ export default function StayHead() {
                         <br></br>
                         Let’s create a digital experience that sets you apart.
                     </motion.p>
-                    <div className="w-full h-full py-6 mt-20">
+                    <div className="w-full h-full py-6">
                         <WorkSlider />
                     </div>
                 </>
