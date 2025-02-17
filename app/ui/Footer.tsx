@@ -8,7 +8,7 @@ import { motion, useInView } from "framer-motion";
 
 export default function Footer() {
     const ref = useRef(null);
-    const inView = useInView(ref, {once: false});
+    const inView = useInView(ref, {once: true });
     return (
         <footer ref={ref} className="w-full flex flex-col items-center justify-between bg-transparent pt-20">
             {inView && (
