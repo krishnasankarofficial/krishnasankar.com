@@ -22,10 +22,10 @@ export default function Slider() {
   };
 
   // Auto-scroll every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(handleNext, 3000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(handleNext, 3000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div className="flex flex-col items-center justify-center w-full">

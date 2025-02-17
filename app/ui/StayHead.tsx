@@ -7,7 +7,7 @@ import WorkSlider from "./WorkSlider";
 
 export default function StayHead() {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+    const isInView = useInView(ref, { once: false });
 
     return (
         <section ref={ref} className="w-full flex flex-col items-center justify-center gap-4">
