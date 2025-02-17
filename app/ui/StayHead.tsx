@@ -6,12 +6,12 @@ import { useRef } from "react";
 import WorkSlider from "./WorkSlider";
 
 export default function StayHead() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+    const stayAheadIRef = useRef(null);
+    const stayAheadIsInView = useInView(stayAheadIRef, { once: true });
 
     return (
-        <section ref={ref} className="w-full flex flex-col items-center justify-center gap-4">
-            {isInView && (
+        <section ref={stayAheadIRef} className="w-full flex flex-col items-center justify-center gap-4">
+            {stayAheadIsInView && (
                 <>
                     <motion.h2
                         initial={{ opacity: 0, y: -50 }}
