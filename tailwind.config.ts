@@ -33,8 +33,8 @@ export default {
           "100%": { color: 'black' },
         },
         slideUp: {
-          "0%": { transform: "translateY(500px)", opacity: 0 },
-          "100%": { transform: "translateY(0)", opacity: 1 },
+          "0%": { transform: "translateY(500px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         }
       },
     },
