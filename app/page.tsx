@@ -1,6 +1,7 @@
 import Hero from './ui/Hero';
 import Services from './ui/Services';
 import StayHead from './ui/StayHead';
+import Megamenu from './ui/Megamenu';
 
 export default function Home() {
   return (
