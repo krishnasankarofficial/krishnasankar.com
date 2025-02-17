@@ -10,7 +10,7 @@ export default function Footer() {
     const ref = useRef(null);
     const inView = useInView(ref, {once: false});
     return (
-        <footer ref={ref} className="w-full flex flex-col items-center justify-between bg-transparent pt-32">
+        <footer ref={ref} className="w-full flex flex-col items-center justify-between bg-transparent pt-20">
             {inView && (
                 <div
                     className="w-full flex flex-col items-center justify-between  bg-gradient-to-t from-black to-gray-800 rounded-t-3xl text-white px-12 py-6 pt-14"
@@ -33,10 +33,14 @@ export default function Footer() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
                                 >
-                                <Link href={'mailto:krishnasankarofficial@gmail.com'}>
+                                <Link 
+                                    className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" 
+                                    href={'mailto:krishnasankarofficial@gmail.com'}>
                                     krishnasankarofficial@gmail.com
                                 </Link>
-                                <Link href={'tel:917306310132'}>
+                                <Link 
+                                    className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" 
+                                    href={'tel:917306310132'}>
                                     +(91) 730 631 0132
                                 </Link>
                             </motion.div>
@@ -63,9 +67,9 @@ export default function Footer() {
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
                                     >
                                     <span className="font-bold font-raleway text-xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent">Links</span>
-                                    <Link href={''}>Home</Link>
-                                    <Link href={''}>About</Link>
-                                    <Link href={''}>Blogs</Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={''}>Home</Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={''}>About</Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={''}>Blogs</Link>
                                 </motion.div>
                                 <motion.div 
                                     className="flex flex-col gap-2"
@@ -74,10 +78,10 @@ export default function Footer() {
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
                                     >
                                     <span className="font-bold font-raleway text-xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent">Services</span>
-                                    <Link href={''}>Website</Link>
-                                    <Link href={''}>E-Commerce</Link>
-                                    <Link href={''}>Maintenance</Link>
-                                    <Link href={''}>UI/UX</Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={''}>Website</Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={''}>E-Commerce</Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={''}>Maintenance</Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={''}>UI/UX</Link>
                                 </motion.div>
                                 <motion.div 
                                     className="flex flex-col gap-2"
@@ -86,9 +90,9 @@ export default function Footer() {
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
                                     >
                                     <span className="font-bold font-raleway text-xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent">Legal</span>
-                                    <Link href={''}>Privacy</Link>
-                                    <Link href={''}>Terms of use</Link>
-                                    <Link href={''}>Cookies</Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={''}>Privacy</Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={''}>Terms of use</Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={''}>Cookies</Link>
                                 </motion.div>
                             </div>
                         </div>
