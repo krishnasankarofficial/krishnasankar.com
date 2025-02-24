@@ -10,7 +10,9 @@ export default {
     extend: {
       colors: {
         dark: "var(--dark)",
+        'dark-secondary': "var(--dark-secondary)",
         light: "var(--light)",
+        'light-secondary': "var(--light-secondary)",
       },
       fontFamily: {
         work_sans: "var(--font-work-sans)",
