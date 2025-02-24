@@ -35,12 +35,15 @@ export default function Header() {
                             }}
                             />
                     </div>
-                    <div className="w-1/2 flex items-center justify-center">
+                    <motion.div 
+                        whileTap={{ scale: 0.8 }}
+                        whileHover={{ scale: 1.1 }}
+                        className="w-1/2 flex items-center justify-center">
                         <Logo />
-                    </div>
+                    </motion.div>
                     <div className="w-1/2 flex items-center justify-end z-50">
                         <motion.div
-                            whileTap={{ scale: 0.6 }}
+                            whileTap={{ scale: 0.8 }}
                             whileHover={{ scale: 1.1 }}
                             className="w-1/2 flex items-center justify-end"
                             >

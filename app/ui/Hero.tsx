@@ -50,7 +50,7 @@ export default function Hero() {
             className="mt-6 flex gap-4"
           >
             <motion.div
-              whileTap={{ scale: 0.6 }}
+              whileTap={{ scale: 0.8 }}
               whileHover={{ scale: 1.1 }}
               >
               <Link
@@ -61,7 +61,7 @@ export default function Hero() {
               </Link>
             </motion.div>
             <motion.div
-              whileTap={{ scale: 0.6 }}
+              whileTap={{ scale: 0.8 }}
               whileHover={{ scale: 1.1 }}
               >
               <Link

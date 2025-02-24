@@ -16,7 +16,7 @@ export default function Services() {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                        className="text-3xl md:text-6xl font-extrabold font-raleway"
+                        className="text-3xl md:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
                         >
                         What I Do Best
                     </motion.h2>
@@ -26,7 +26,7 @@ export default function Services() {
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
                         className="text-center text-lg flex items-center justify-end relative"
                         >
-                        I ensure a seamless digital experience that keeps you <b className="ml-1">ahead of the competition</b>.
+                        Building high-performance web solutions using cutting-edge technologies for seamless user experiences.
                     </motion.p>
                     <div className="w-full h-[450px] flex items-center justify-center py-6 px-32 gap-4">
                         <motion.div 

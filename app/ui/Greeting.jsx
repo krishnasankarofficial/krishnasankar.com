@@ -35,14 +35,14 @@ const Greeting = () => {
   }, []);
 
   return (
-    <div style={{ textAlign: 'center', padding: '50px' }}>
+    <div style={{ textAlign: 'center', padding: '0' }}>
       <motion.div
         key={currentGreetingIndex}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
-        className="text-7xl md:text-5xl font-semibold z-10 bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
+        className="text-7xl md:text-5xl font-semibold z-10 bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent py-12"
         >
         <p>{greetings[currentGreetingIndex].greeting}</p>
       </motion.div>
