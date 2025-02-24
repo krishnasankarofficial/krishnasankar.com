@@ -39,11 +39,17 @@ export default function Header() {
                         <Logo />
                     </div>
                     <div className="w-1/2 flex items-center justify-end z-50">
-                        <Link
-                            href={'/hire-me'} 
-                            className="w-1/2 text-center bg-gradient-to-t from-black to-gray-700 text-white cursor-pointer rounded-full font-semibold px-4 py-2 shadow-sm hover:scale-110 duration-300 hover:-translate-x-2">
-                            Hire Me
-                        </Link>
+                        <motion.div
+                            whileTap={{ scale: 0.6 }}
+                            whileHover={{ scale: 1.1 }}
+                            className="w-1/2 flex items-center justify-end"
+                            >
+                            <Link
+                                href={'/hire-me'} 
+                                className="w-full text-center bg-gradient-to-t from-black to-gray-700 text-white cursor-pointer rounded-full font-semibold px-4 py-2 shadow-sm">
+                                Hire Me
+                            </Link>
+                        </motion.div>
                     </div>
                 </motion.div>
             </header>

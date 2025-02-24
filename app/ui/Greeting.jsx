@@ -42,7 +42,7 @@ const Greeting = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
-        className="text-7xl md:text-5xl font-semibold z-10"
+        className="text-7xl md:text-5xl font-semibold z-10 bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
         >
         <p>{greetings[currentGreetingIndex].greeting}</p>
       </motion.div>

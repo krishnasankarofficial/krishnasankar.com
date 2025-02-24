@@ -38,7 +38,7 @@ export default function Services() {
                             <CardWithButton 
                                 title="Custom Websites" 
                                 description="Building fully responsive and fast websites using Next.js, React, or other modern frameworks tailored to your needs." 
-                                img="/images/web.jpg"
+                                img="/images/web.png"
                                 main
                             />
                         </motion.div>
