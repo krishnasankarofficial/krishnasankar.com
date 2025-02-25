@@ -32,7 +32,7 @@ export default function Clients() {
             setCurrentReview((prev) => (prev + 1) % reviews.length);
         }, 5000);
         return () => clearInterval(interval);
-    }, []);
+    }, [reviews.length]);
 
     const handlePreviousClick = () => {
         setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);

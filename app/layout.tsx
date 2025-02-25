@@ -4,7 +4,7 @@ import localFont from 'next/font/local';
 import "../styles/globals.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
-import Megamenu from "./ui/Megamenu";
+// import Megamenu from "./ui/Megamenu";
 import GoToTop from "./ui/GoToTop";
 
 const workSans = Work_Sans({
