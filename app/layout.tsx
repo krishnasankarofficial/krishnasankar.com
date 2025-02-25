@@ -4,6 +4,8 @@ import localFont from 'next/font/local';
 import "../styles/globals.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
+import Megamenu from "./ui/Megamenu";
+import GoToTop from "./ui/GoToTop";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -42,6 +44,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
@@ -53,6 +56,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <GoToTop />
       </body>
     </html>
   );

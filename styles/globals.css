@@ -13,13 +13,11 @@
 
 :root {
   --dark: #0a0a0a;
+  --dark-secondary: #272727;
   --light: #ffffff;
+  --light-secondary: #ffffff;
 }
 
-body {
-  color: var(--light);
-  background: var(--dark);
-}
 .backdrop {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* Safari support */

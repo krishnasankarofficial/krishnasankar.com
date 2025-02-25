@@ -4,24 +4,26 @@ const CardWithButton = ({
     title, 
     description, 
     main,
+    height,
     img,
   } : {
     title: string, 
     description: string,
     main?: boolean,
+    height?: number,
     img?: string,
   }) => {
   return (
-    <div className="relative w-full h-full bg-white rounded-3xl shadow-lg p-6 overflow-hidden cursor-pointer flex flex-col items-start justify-start hover:-translate-y-2 hover:scale-105 duration-300 group">
+    <div className={`relative w-full ${height ? 'h-[450px]' : 'min-h-[150px] lg:min-h-[220px]'} bg-white bg-opacity-80 rounded-3xl shadow-lg p-6 overflow-hidden cursor-pointer flex flex-col items-start justify-start hover:-translate-y-2 hover:scale-105 duration-300 group`}>
       {/* Card Content */}
-      <h3 className={`font-bold mb-2 font-raleway ${main ? 'text-3xl' : 'text-lg'} z-10`}>{title}</h3>
+      <h3 className={`font-bold mb-2 font-raleway ${main ? 'text-2xl lg:text-3xl' : 'text-lg'} z-10`}>{title}</h3>
       <p className="text-gray-600 text-md z-10 hyphens-auto break-words">
         {description}
       </p>
 
       {/* Card Image */}
       {img && (
-        <div className="w-full h-full flex items-center justify-center z-0">
+        <div className="w-64 h-64 lg:w-full lg:h-full flex items-center justify-center z-0">
           <Image 
             src={img}
             width={300}
