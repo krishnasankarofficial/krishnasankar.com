@@ -17,7 +17,7 @@ export default function StayHead() {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                        className="text-3xl md:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
+                        className="text-5xl text-center md:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
                         >
                         Stay Ahead, Stand Out
                     </motion.h2>
@@ -36,7 +36,7 @@ export default function StayHead() {
                         <br></br>
                         Let’s create something unique that makes you stand out!
                     </motion.p>
-                    <div className="w-full h-full py-6">
+                    <div className="w-full h-52 mb-12 lg:h-96 py-2 lg:py-6">
                         <WorkSlider />
                     </div>
                 </>

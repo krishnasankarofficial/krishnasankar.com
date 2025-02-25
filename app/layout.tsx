@@ -55,8 +55,8 @@ export default function RootLayout({
         <main className="flex-1 pt-10">
           {children}
         </main>
-        {/* <Footer /> */}
-        {/* <GoToTop /> */}
+        <Footer />
+        <GoToTop />
       </body>
     </html>
   );

@@ -43,54 +43,48 @@ export default function Clients() {
     };
 
     return (
-        <section ref={clientsRef} className="w-full bg-white bg-opacity-20 rounded-[2rem] h-96 flex items-start justify-between p-10">
-            <div className="w-2/5 h-full flex flex-col items-start justify-between">
+        <section ref={clientsRef} className="w-full bg-white bg-opacity-20 rounded-[2rem] h-full flex flex-col md:flex-row items-start justify-between gap-4 p-10">
                 {clientsInView && (
-                    <>
-                        <motion.h2 
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-                            className="text-3xl md:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent pb-4"
-                            >
-                            What my clients say about me?
-                        </motion.h2>
-                        <div className="flex items-center justify-start gap-4">
-                            <motion.button
-                                whileTap={{ scale: 0.8 }}
-                                whileHover={{ scale: 1.1 }}
-                                onClick={handlePreviousClick}
-                                className="rotate-[200deg] bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center cursor-pointer"
-                            >
-                                <Image 
-                                    src={'/images/arrow-up.png'}
-                                    width={30}
-                                    height={30}
-                                    alt="Arrow up"
-                                />
-                            </motion.button>
-                            <motion.button
-                                whileTap={{ scale: 0.8 }}
-                                whileHover={{ scale: 1.1 }}
-                                onClick={handleNextClick}
-                                className="rotate-[20deg] bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center cursor-pointer"
-                            >
-                                <Image 
-                                    src={'/images/arrow-up.png'}
-                                    width={30}
-                                    height={30}
-                                    alt="Arrow up"
-                                />
-                            </motion.button>
-                        </div>
-                    </>
+                <div className="md:w-2/3 h-full flex flex-col items-start justify-between">
+                    <motion.h2 
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+                        className="text-3xl md:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent pb-4"
+                        >
+                        What my clients say about me?
+                    </motion.h2>
+                    <div className="flex items-center justify-start gap-4">
+                        <button
+                            onClick={handlePreviousClick}
+                            className="rotate-[200deg] bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center cursor-pointer hover:scale-110 active:scale-95"
+                        >
+                            <Image 
+                                src={'/images/arrow-up.png'}
+                                width={30}
+                                height={30}
+                                alt="Arrow up"
+                            />
+                        </button>
+                        <button
+                            onClick={handleNextClick}
+                            className="rotate-[20deg] bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center cursor-pointer hover:scale-110 active:scale-95"
+                        >
+                            <Image 
+                                src={'/images/arrow-up.png'}
+                                width={30}
+                                height={30}
+                                alt="Arrow up"
+                            />
+                        </button>
+                    </div>
+                </div>
                 )}
-            </div>
             <div className="w-full h-full overflow-hidden flex flex-col items-end justify-between gap-4">
                 {reviews.map((review, index) => (
                     <div 
                         key={index} 
-                        className={`w-2/3 h-full ${currentReview === index ? 'flex' : 'hidden'} flex-col gap-6 bg-white rounded-3xl p-6 px-8 bg-opacity-80 transition-opacity duration-1000 animate-slideUp`}
+                        className={`w-full min-h-64 ${currentReview === index ? 'flex' : 'hidden'} flex-col gap-6 bg-white rounded-3xl p-6 px-8 bg-opacity-80 transition-opacity duration-1000 animate-slideUp`}
                     >
                         <div className="flex items-center justify-start gap-4">
                             <Image 
@@ -101,7 +95,7 @@ export default function Clients() {
                             />
                             <div className="flex flex-col items-start justify-start">
                                 <span className="font-bold text-2xl font-raleway">{review.client}</span>
-                                <span className="text-gray-700">{review.designation}</span>
+                                <span className="text-gray-700 break-words hyphens-auto text-justify">{review.designation}</span>
                             </div>
                         </div>
                         <span className="">{review.review}</span>

@@ -15,7 +15,7 @@ export default function Footer() {
                 <div
                     className="w-full flex flex-col items-center justify-between  bg-gradient-to-t from-black to-gray-800 rounded-t-3xl text-white px-12 py-6 pt-14"
                     >
-                    <div className="w-full flex items-start justify-between">
+                    <div className="w-full flex flex-col text-center md:text-start lg:flex-row items-start justify-between">
                         <div 
                             className="flex flex-col"
                             >
@@ -58,8 +58,8 @@ export default function Footer() {
                                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
                                 >Stan Lee, 1962</motion.span>
                         </div>
-                        <div className="flex flex-col items-start justify-center">
-                            <div className="w-full flex items-start justify-between gap-24">
+                        <div className="w-full md:w-auto flex flex-col items-start justify-center">
+                            <div className="w-full flex items-start justify-between gap-4 md:gap-12 lg:gap-24">
                                 <motion.div 
                                     className="flex flex-col gap-2"
                                     initial={{ opacity: 0, y: -50 }}
@@ -97,8 +97,8 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full h-[1px] bg-white opacity-20 rounded-full  my-4"></div>
-                    <div className="w-full flex items-center justify-between">
+                    <div className="w-full h-[1px] bg-white opacity-20 rounded-full my-4"></div>
+                    <div className="w-full flex flex-col md:flex-row text-center items-center justify-between">
                         <motion.div 
                             className="flex-1 flex items-center justify-between gap-4"
                             initial={{ opacity: 0, y: -50 }}

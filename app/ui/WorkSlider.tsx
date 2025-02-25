@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -12,6 +12,7 @@ const works = [
 
 export default function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % works.length);
@@ -21,18 +22,22 @@ export default function Slider() {
     setCurrentIndex((prev) => (prev - 1 + works.length) % works.length);
   };
 
-  // Auto-scroll every 3 seconds
-  // useEffect(() => {
-  //   const interval = setInterval(handleNext, 3000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full">
-      <div className="relative flex items-center justify-center w-full h-64">
+    <div className="flex flex-col items-center justify-center w-full h-full">
+      <div className="relative flex items-center justify-center w-full h-full">
         <button
           onClick={handlePrev}
-          className="absolute left-16 top-1/2 -translate-y-1/2 z-40"
+          className="absolute left-0 lg:left-16 -bottom-28 lg:top-1/2 -translate-y-1/2 z-40"
         >
           <Image 
             src={'/images/right.png'}
@@ -58,11 +63,11 @@ export default function Slider() {
             return (
               <motion.div
                 key={work.id}
-                className={`absolute w-[400px] h-auto bg-white rounded-3xl shadow-lg flex items-center justify-center text-xl cursor-pointer object-cover`}
+                className={`absolute w-[250px] lg:w-[500px] h-auto bg-white rounded-3xl shadow-lg flex items-center justify-center text-xl cursor-pointer object-cover`}
                 initial={{ scale: 0.8, x: adjustedPosition * 200, opacity: 1 }}
                 animate={{
                   scale: scale,
-                  x: adjustedPosition * 100,
+                  x: isMobile ? adjustedPosition * 40 : adjustedPosition * 80,
                   opacity: isCenter ? 1 : 0.8,
                   zIndex: zIndex,
                 }}
@@ -81,7 +86,7 @@ export default function Slider() {
         </AnimatePresence>
         <button
           onClick={handleNext}
-          className="absolute right-16 top-1/2 -translate-y-1/2 z-40"
+          className="absolute right-0 lg:right-16 -bottom-28 lg:top-1/2 -translate-y-1/2 z-40"
         >
           <Image 
             src={'/images/right.png'}
