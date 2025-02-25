@@ -61,7 +61,7 @@ export default function Footer() {
                         <div className="w-full md:w-auto flex flex-col items-start justify-center">
                             <div className="w-full flex items-start justify-between gap-4 md:gap-12 lg:gap-24">
                                 <motion.div 
-                                    className="flex flex-col gap-2"
+                                    className="w-1/2 flex flex-col gap-2"
                                     initial={{ opacity: 0, y: -50 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
@@ -72,7 +72,7 @@ export default function Footer() {
                                     <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>Blogs</Link>
                                 </motion.div>
                                 <motion.div 
-                                    className="flex flex-col gap-2"
+                                    className="w-1/2 flex flex-col gap-2"
                                     initial={{ opacity: 0, y: -50 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
@@ -84,7 +84,7 @@ export default function Footer() {
                                     <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>UI/UX</Link>
                                 </motion.div>
                                 <motion.div 
-                                    className="flex flex-col gap-2"
+                                    className="w-1/2 flex flex-col gap-2"
                                     initial={{ opacity: 0, y: -50 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}

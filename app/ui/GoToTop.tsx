@@ -32,7 +32,7 @@ export default function GoToTop() {
                     whileHover={{ scale: 1.1, y: -10 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={scrollToTop}
-                    className="fixed bottom-10 right-10 p-2 bg-gradient-to-tr from-green-500 to-cyan-500 rounded-full shadow-lg"
+                    className="fixed bottom-10 right-10 p-2 bg-gradient-to-tr from-green-500 to-cyan-500 rounded-full shadow-lg z-50"
                 >
                     <Image
                         src={"/images/arrow-circle.png"}
