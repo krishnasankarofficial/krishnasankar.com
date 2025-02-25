@@ -8,19 +8,19 @@ import { useRef } from "react";
 
 export default function Hero() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const heroInView = useInView(ref, { once: true })
   
 
   return (
     <section ref={ref} className="relative w-full h-screen flex flex-col items-center justify-center text-center animate-white-to-black z-0">
-      {isInView && (
+      {heroInView && (
         <>
           <Greeting />
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-7xl md:text-7xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
+            className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
           >
             It&apos;s me, Krishnasankar
           </motion.h1>

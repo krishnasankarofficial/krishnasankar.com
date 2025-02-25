@@ -24,6 +24,7 @@ export default {
         'scale_n_glow': "scale_n_glow 2s ease-in-out forwards",
         'white_to_black': "white_to_black 4.5s ease-in-out forwards",
         'slideUp': "slideUp 5s ease-in-out forwards",
+        'dropDown': "dropDown .3s ease-out forwards",
       },
       keyframes: {
         scale_n_glow: {
@@ -39,7 +40,11 @@ export default {
           "20%": { transform: "translateY(0)", opacity: "1" },
           "80%": { transform: "translateY(0)", opacity: "1" },
           "100%": { transform: "translateY(300px)", opacity: "0" },
-        }
+        },
+        dropDown: {
+          "0%": { opacity: "0", transform: "translateY(-20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
     },
   },
