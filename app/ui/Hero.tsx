@@ -10,7 +10,7 @@ export default function Hero() {
   const ref = useRef(null)
   const heroInView = useInView(ref, { once: true })
   
-
+  
   return (
     <section ref={ref} className="relative w-full h-screen flex flex-col items-center justify-center text-center animate-white-to-black z-0">
       {heroInView && (
