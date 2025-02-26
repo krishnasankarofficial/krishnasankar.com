@@ -48,7 +48,7 @@ export default function Header() {
                             className="flex items-center justify-end"
                             >
                             <Link
-                                href={'/hire-me'} 
+                                href={'/contact'} 
                                 className="w-full text-center bg-gradient-to-t from-black to-gray-700 text-white cursor-pointer rounded-full font-semibold px-4 py-2 shadow-sm">
                                 Hire Me
                             </Link>

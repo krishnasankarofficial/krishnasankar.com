@@ -37,6 +37,11 @@ const sofia = Sofia({
 export const metadata: Metadata = {
   title: "Krishnasankar | Freelance Web Developer",
   description: "Krishnasankar is a freelance web developer specializing in modern web technologies and responsive design. Discover his portfolio and services.",
+  icons: {
+    icon: "/icon-white.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  }
 };
 
 export default function RootLayout({
@@ -48,11 +53,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${workSans.variable} ${raleway.variable} ${sofia.variable} ${anthony.variable} antialiased font-work_sans relative overflow-x-hidden`}
+        className={`${workSans.variable} ${raleway.variable} ${sofia.variable} ${anthony.variable} antialiased font-work_sans relative overflow-x-hidden flex flex-col w-screen min-h-screen`} 
       >
         <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-l from-green-400 to-cyan-400 -z-10 rounded-xl "></div>
         <Header />
-        <main className="flex-1 pt-10">
+        <main className="flex-1">
           {children}
         </main>
         <Footer />

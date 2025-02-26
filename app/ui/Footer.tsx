@@ -35,12 +35,16 @@ export default function Footer() {
                                 >
                                 <Link 
                                     className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" 
-                                    href={'mailto:krishnasankarofficial@gmail.com'}>
+                                    href={'mailto:krishnasankarofficial@gmail.com'}
+                                    target="_blank"
+                                    >
                                     krishnasankarofficial@gmail.com
                                 </Link>
                                 <Link 
                                     className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" 
-                                    href={'tel:917306310132'}>
+                                    href={'tel:917306310132'}
+                                    target="_blank"
+                                    >
                                     +(91) 730 631 0132
                                 </Link>
                             </motion.div>
@@ -117,7 +121,8 @@ export default function Footer() {
 
                             >
                                 <Link 
-                                    href={'#'}
+                                    href={'https://www.instagram.com/ki.chu____'}
+                                    target="_blank"
                                     className="bg-gradient-to-tr from-green-500 to-cyan-500 p-2 rounded-xl text-black flex items-center justify-center text-sm"
                                     >
                                     <Instagram style={{fontSize:20}}/>
@@ -132,7 +137,8 @@ export default function Footer() {
 
                             >
                                 <Link 
-                                    href={'#'}
+                                    href={'https://www.facebook.com/krishna.sankar.587/'}
+                                    target="_blank"
                                     className="bg-gradient-to-tr from-green-500 to-cyan-500 p-2 rounded-xl text-black flex items-center justify-center text-sm"
                                     >
                                     <Facebook style={{fontSize:20}}/>
@@ -147,7 +153,8 @@ export default function Footer() {
 
                             >
                                 <Link 
-                                    href={'#'}
+                                    href={'https://wa.me/+917306310132'}
+                                    target="_blank"
                                     className="bg-gradient-to-tr from-green-500 to-cyan-500 p-2 rounded-xl text-black flex items-center justify-center text-sm"
                                     >
                                     <WhatsApp style={{fontSize:20}}/>

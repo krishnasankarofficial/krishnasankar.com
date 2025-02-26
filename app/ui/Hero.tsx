@@ -54,7 +54,7 @@ export default function Hero() {
               whileHover={{ scale: 1.1 }}
               >
               <Link
-                href="#contact"
+                href="/contact"
                 className="px-6 py-3 bg-transparent border border-black font-medium rounded-full hover:bg-gradient-to-t hover:from-black hover:to-gray-800 hover:text-white hover:scale-110 shadow-xl duration-300"
               >
                 Contact Me
@@ -65,7 +65,7 @@ export default function Hero() {
               whileHover={{ scale: 1.1 }}
               >
               <Link
-                href="#portfolio"
+                href="/portfolio"
                 className="px-6 py-3 bg-gradient-to-t from-black to-gray-800  text-white font-medium rounded-full hover:bg-black hover:scale-110 duration-300 shadow-xl"
               >
                 View Portfolio
