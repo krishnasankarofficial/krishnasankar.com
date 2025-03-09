@@ -89,7 +89,7 @@ export default function Clients() {
                                 <span className="text-gray-700">{review.designation}</span>
                             </div>
                         </div>
-                        <span className="">{review.review}</span>
+                        <span className="text-justify break-words hyphens-auto">{review.review}</span>
                     </div>
                 ))}
             </div>
