@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "./Logo";
-import Megamenu from "./Megamenu";
+import Logo from "@/components/ui/Logo";
+import Megamenu from "@/components/ui/Megamenu";
 import { useState } from "react";
 
 export default function Header() {

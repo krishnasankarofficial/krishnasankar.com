@@ -1,8 +1,8 @@
-import Clients from './ui/Clients';
-import FAQ from './ui/FAQ';
-import Hero from './ui/Hero';
-import Services from './ui/Services';
-import StayHead from './ui/StayHead';
+import Clients from '@/components/section/Clients';
+import FAQ from '@/components/section/FAQ';
+import Hero from '@/components/section/Hero';
+import Services from '@/components/section/Services';
+import StayHead from '@/components/section/StayHead';
 
 export default function Home() {
   return (

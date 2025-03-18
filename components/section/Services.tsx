@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import CardWithButton from "./CardWithButton";
+import CardWithButton from "@/components/ui/CardWithButton";
 
 export default function Services() {
     const ref = useRef(null);

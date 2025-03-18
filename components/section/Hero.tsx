@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import Greeting from './Greeting'
+import Greeting from '@/components/ui/Greeting'
 import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";

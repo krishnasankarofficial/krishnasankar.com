@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { BoltOutlined } from '@mui/icons-material';
 import { useRef } from "react";
-import WorkSlider from "./WorkSlider";
+import WorkSlider from "@/components/ui/WorkSlider";
 
 export default function StayHead() {
     const stayAheadIRef = useRef(null);

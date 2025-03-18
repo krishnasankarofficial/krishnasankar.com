@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Work_Sans, Raleway, Sofia } from "next/font/google";
 import localFont from 'next/font/local';
 import "../styles/globals.css";
-import Header from "./ui/Header";
-import Footer from "./ui/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 // import Megamenu from "./ui/Megamenu";
-import GoToTop from "./ui/GoToTop";
+import GoToTop from "../components/ui/GoToTop";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
