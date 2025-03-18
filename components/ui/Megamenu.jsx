@@ -72,7 +72,7 @@ export default function Megamenu() {
             'items': [
                 {
                     'name': 'Blog',
-                    'url': '/blogs',
+                    'url': '/blog',
                 },
                 {
                     'name': 'Case Studies',
