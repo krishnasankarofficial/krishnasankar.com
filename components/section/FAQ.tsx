@@ -71,7 +71,7 @@ export default function FAQ() {
                                 className={`absolute top-4 right-4 transform ${faq.active ? 'rotate-180' : ''} duration-300`}
                             />
                             <div className="flex flex-col items-start gap-4">
-                                <p className="text-lg md:text-xl font-bold font-raleway leading-tight pr-4">{faq.question}</p>
+                                <p className="text-lg md:text-xl font-bold font-raleway leading-tight pr-6">{faq.question}</p>
                             </div>
                             {faq.active && (
                                 <div className="text-sm md:text-lg flex flex-col items-start gap-4 animate-dropDown">

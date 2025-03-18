@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Megamenu() {
-    const [activeItem, setActiveItem] = useState(null);
+    const [activeItem, setActiveItem] = useState('Services');
 
     const handleMouseEnter = (item) => {
         setActiveItem(item);
@@ -146,7 +146,7 @@ export default function Megamenu() {
                     <Link
                         href={item.url}
                         key={i}
-                        className={`cursor-pointer w-full h-full flex-col p-4 bg-white bg-opacity-50 rounded-2xl shadow-sm ${activeItem === item.name ? 'bg-opacity-100 bg-gradient-to-t from-black to-gray-800 text-white' : ''}`}
+                        className={`cursor-pointer w-full h-full flex-col p-4 bg-white bg-opacity-80 rounded-2xl shadow-sm ${activeItem === item.name ? 'bg-opacity-100 bg-gradient-to-t from-black to-gray-800 text-white' : ''}`}
                         onMouseEnter={() => handleMouseEnter(item.name)}
                         onClick={() => handleClick(item.name)}
                     >
@@ -161,7 +161,9 @@ export default function Megamenu() {
                         <div className="w-full h-1/2 flex items-center justify-between gap-4">
                             {
                                 item.items.length > 0 && 
-                                <Link href={item.items[0].url} className="flex-1 h-full bg-white hover:bg-white rounded-3xl shadow-sm bg-opacity-80 flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
+                                <Link 
+                                    href={item.items[0].url} 
+                                    className="flex-1 h-full bg-white rounded-3xl shadow-sm flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
                                     <span className='font-bold font-raleway text-3xl'>{item.items[0].name}</span>
                                     <div
                                         className="absolute w-12 h-12 -bottom-2 -right-2 bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center group-hover:-translate-y-2 group-hover:-translate-x-2"
@@ -178,7 +180,7 @@ export default function Megamenu() {
                             <div className="flex-1 h-full flex flex-col gap-4">
                                 {
                                     item.items.length > 1 && 
-                                    <Link href={item.items[1].url} className="w-full h-1/2 bg-white hover:bg-white rounded-3xl shadow-sm bg-opacity-80 flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
+                                    <Link href={item.items[1].url} className="w-full h-1/2 bg-white rounded-3xl shadow-sm flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
                                         <span className='font-bold font-raleway text-xl'>{item.items[1].name}</span>
                                         <div
                                             className="absolute w-12 h-12 -bottom-2 -right-2 bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center group-hover:-translate-y-2 group-hover:-translate-x-2"
@@ -194,7 +196,7 @@ export default function Megamenu() {
                                 }
                                 {
                                     item.items.length > 2 && 
-                                    <Link href={item.items[2].url} className="w-full h-1/2  bg-white hover:bg-white rounded-3xl shadow-sm bg-opacity-80 flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
+                                    <Link href={item.items[2].url} className="w-full h-1/2  bg-white rounded-3xl shadow-sm flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
                                         <span className='font-bold font-raleway text-xl'>{item.items[2].name}</span>
                                         <div
                                                 className="absolute w-12 h-12 -bottom-2 -right-2 bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center group-hover:-translate-y-2 group-hover:-translate-x-2"
@@ -214,7 +216,7 @@ export default function Megamenu() {
                             <div className="flex-1 h-full flex flex-col gap-4">
                                 {
                                     item.items.length > 3 && 
-                                    <Link href={item.items[3].url} className="w-full h-1/2  bg-white hover:bg-white rounded-3xl shadow-sm bg-opacity-80 flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
+                                    <Link href={item.items[3].url} className="w-full h-1/2  bg-white rounded-3xl shadow-sm flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
                                         <span className='font-bold font-raleway text-xl'>{item.items[3].name}</span>
                                         <div
                                                 className="absolute w-12 h-12 -bottom-2 -right-2 bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center group-hover:-translate-y-2 group-hover:-translate-x-2"
@@ -230,7 +232,7 @@ export default function Megamenu() {
                                 }
                                 {
                                     item.items.length > 4 && 
-                                    <Link href={item.items[4].url} className="w-full h-1/2  bg-white hover:bg-white rounded-3xl shadow-sm bg-opacity-80 flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
+                                    <Link href={item.items[4].url} className="w-full h-1/2  bg-white rounded-3xl shadow-sm flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
                                         <span className='font-bold font-raleway text-xl'>{item.items[4].name}</span>
                                         <div
                                                 className="absolute w-12 h-12 -bottom-2 -right-2 bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center group-hover:-translate-y-2 group-hover:-translate-x-2"
@@ -249,7 +251,7 @@ export default function Megamenu() {
                                 <div className="flex-1 h-full flex flex-col gap-4">
                                     {
                                         item.items.length > 5 && 
-                                        <Link href={item.items[5].url} className="w-full h-1/2  bg-white hover:bg-white rounded-3xl shadow-sm bg-opacity-80 flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
+                                        <Link href={item.items[5].url} className="w-full h-1/2  bg-white rounded-3xl shadow-sm flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
                                             <span className='font-bold font-raleway text-xl'>{item.items[5].name}</span>
                                             <div
                                                 className="absolute w-12 h-12 -bottom-2 -right-2 bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center group-hover:-translate-y-2 group-hover:-translate-x-2"
@@ -265,7 +267,7 @@ export default function Megamenu() {
                                     }
                                     {
                                         item.items.length > 6 && 
-                                        <Link href={item.items[6].url} className="w-full h-1/2  bg-white hover:bg-white rounded-3xl shadow-sm bg-opacity-80 flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
+                                        <Link href={item.items[6].url} className="w-full h-1/2  bg-white rounded-3xl shadow-sm flex items-center justify-center relative overflow-hidden group hover:scale-105 duration-300 cursor-pointer">
                                             <span className='font-bold font-raleway text-xl'>{item.items[6].name}</span>
                                             <div
                                                 className="absolute w-12 h-12 -bottom-2 -right-2 bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center group-hover:-translate-y-2 group-hover:-translate-x-2"
