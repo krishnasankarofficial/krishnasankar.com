@@ -140,7 +140,7 @@ export default function Megamenu() {
     
 
     return (
-        <div className="w-full h-[60vh] flex justify-center items-center gap-4 rounded-3xl border border-[#ffffff2a] bg-white bg-opacity-20 shadow-xl backdrop-blur-sm z-50">
+        <div className="w-full h-[80vh] flex justify-center items-center gap-4 rounded-3xl border border-[#ffffff2a] bg-white bg-opacity-20 shadow-xl backdrop-blur-sm z-50">
             <div className="w-1/3 h-full p-8 flex flex-col items-start justify-between gap-4">
                 {menuItems.map((item, i) => (
                     <Link

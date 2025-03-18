@@ -9,7 +9,7 @@ export default function Logo({ size }: LogoProps) {
         <Link 
             href="/" 
             className={`font-anthony translate-y-1 ${
-                size === 'lg' ? 'text-5xl' : 'text-4xl'
+                size === 'lg' ? 'text-5xl' : 'text-3xl'
             }`}
         >
             Krishnasankar

@@ -43,14 +43,14 @@ export default function FAQ() {
     };
 
     return (
-        <section ref={FAQRef} className="w-full flex flex-col items-center justify-center gap-4 py-6">
+        <section ref={FAQRef} className="w-full flex flex-col items-center justify-center gap-2 lg:gap-4 lg:py-6">
             {faqInView && (
                 <>
                     <motion.h2 
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-                        className="mb-6 text-4xl md:text-5xl lg:text-6xl text-center font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent py-4"
+                        className="lg:mb-6 text-3xl md:text-5xl lg:text-6xl text-center font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent md:py-4"
                         >
                         Frequently Asked Questions
                     </motion.h2>
@@ -60,7 +60,7 @@ export default function FAQ() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 + index * 0.2 }} 
                             key={index} 
-                            className="relative w-full lg:w-4/5 flex flex-col items-start justify-between gap-4 py-4 px-6 bg-white bg-opacity-20 rounded-3xl cursor-pointer duration-300"
+                            className="relative w-full lg:w-4/5 flex flex-col items-start justify-between gap-2 md:gap-4 py-4 px-6 bg-white bg-opacity-20 rounded-3xl cursor-pointer duration-300"
                             onMouseDownCapture={handleFAQClick(index)}
                             >
                             <Image 
@@ -71,10 +71,10 @@ export default function FAQ() {
                                 className={`absolute top-4 right-4 transform ${faq.active ? 'rotate-180' : ''} duration-300`}
                             />
                             <div className="flex flex-col items-start gap-4">
-                                <p className="text-xl font-bold font-raleway pr-4">{faq.question}</p>
+                                <p className="text-lg md:text-xl font-bold font-raleway leading-tight pr-4">{faq.question}</p>
                             </div>
                             {faq.active && (
-                                <div className="flex flex-col items-start gap-4 animate-dropDown">
+                                <div className="text-sm md:text-lg flex flex-col items-start gap-4 animate-dropDown">
                                     <p>{faq.answer}</p>
                                 </div>
                             )}

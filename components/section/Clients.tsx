@@ -41,20 +41,20 @@ export default function Clients() {
     };
 
     return (
-        <section className="w-full h-96 flex items-start justify-between p-6 py-12">
-            <div className="w-2/5 h-full flex flex-col items-start justify-between">
-                <span className="text-3xl md:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent py-4">
+        <section className="w-full h-full flex flex-col lg:flex-row items-start justify-between p-6 lg:py-12">
+            <div className="lg:w-2/5 h-full flex flex-col items-start justify-between">
+                <span className="text-3xl md:text-5xl lg:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent py-4">
                     What my clients say about me?
                 </span>
-                <div className="flex items-center justify-start gap-4">
+                <div className="w-full flex items-center justify-end lg:justify-start -translate-y-6 lg:translate-y-0 gap-2 lg:gap-4">
                     <button
                         onClick={handlePreviousClick}
                         className="rotate-[200deg] bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center cursor-pointer hover:scale-110 active:scale-75"
                     >
                         <Image 
                             src={'/images/arrow-up.png'}
-                            width={30}
-                            height={30}
+                            width={25}
+                            height={25}
                             alt="Arrow up"
                         />
                     </button>
@@ -64,18 +64,18 @@ export default function Clients() {
                     >
                         <Image 
                             src={'/images/arrow-up.png'}
-                            width={30}
-                            height={30}
+                            width={25}
+                            height={25}
                             alt="Arrow up"
                         />
                     </button>
                 </div>
             </div>
-            <div className="w-full h-full overflow-hidden flex flex-col items-end justify-between gap-4">
+            <div className="w-full h-full overflow-hidden flex flex-col items-end justify-between gap-2 lg:gap-4">
                 {reviews.map((review, index) => (
                     <div 
                         key={index} 
-                        className={`w-2/3 h-full ${currentReview === index ? 'flex' : 'hidden'} flex-col gap-6 bg-white rounded-3xl p-6 px-8 bg-opacity-80 transition-opacity duration-1000 animate-slideUp`}
+                        className={`lg:w-2/3 h-full ${currentReview === index ? 'flex' : 'hidden'} flex-col gap-2 lg:gap-6 bg-white rounded-3xl mt-4 p-4 lg:p-6 px-6 lg:px-8 bg-opacity-80 transition-opacity duration-1000 animate-slideUp`}
                     >
                         <div className="flex items-center justify-start gap-4">
                             <Image 
@@ -89,7 +89,7 @@ export default function Clients() {
                                 <span className="text-gray-700">{review.designation}</span>
                             </div>
                         </div>
-                        <span className="text-justify break-words hyphens-auto">{review.review}</span>
+                        <span className="text-sm md:text-lg text-pretty break-words hyphens-auto">{review.review}</span>
                     </div>
                 ))}
             </div>

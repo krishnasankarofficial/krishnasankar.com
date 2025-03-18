@@ -17,7 +17,7 @@ export default function StayHead() {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                        className="text-5xl text-center md:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
+                        className="text-3xl md:text-5xl lg:text-6xl text-center font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
                         >
                         Stay Ahead, Stand Out
                     </motion.h2>
@@ -25,7 +25,7 @@ export default function StayHead() {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-                        className="text-center text-lg"
+                        className="text-sm md:text-lg text-center"
                         >
                         I build 
                         <span className="relative mx-1">

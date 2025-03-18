@@ -12,7 +12,7 @@ export default function Header() {
     const [showMenu, setShowMenu] = useState(false);
 
     return (
-        <div className="fixed top-4 left-0 w-full z-50">
+        <div className="sticky top-4 left-0 w-full z-50">
             <header className="w-full flex items-center justify-center z-50">
                 <motion.div
                     initial={{ opacity: 0, y: -100 }}
@@ -24,8 +24,8 @@ export default function Header() {
                         <Image 
                             className="cursor-pointer hover:scale-110 duration-300 " 
                             src={'/images/app.png'} 
-                            width={35} 
-                            height={35} 
+                            width={30} 
+                            height={30} 
                             alt="Menu" 
                             onMouseEnter={() => setShowMenu(true)}
                             onMouseLeave={(e) => {
@@ -49,7 +49,7 @@ export default function Header() {
                             >
                             <Link
                                 href={'/contact'} 
-                                className="w-full text-center bg-gradient-to-t from-black to-gray-700 text-white cursor-pointer rounded-full font-semibold px-4 py-2 shadow-sm">
+                                className="text-sm md:text-md w-full text-center bg-gradient-to-t from-black to-gray-700 text-white cursor-pointer rounded-full font-semibold px-4 py-2 shadow-sm">
                                 Hire Me
                             </Link>
                         </motion.div>

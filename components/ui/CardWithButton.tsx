@@ -14,10 +14,10 @@ const CardWithButton = ({
     img?: string,
   }) => {
   return (
-    <div className={`relative w-full ${height ? 'h-[450px]' : 'min-h-[150px] lg:min-h-[220px]'} bg-white bg-opacity-80 rounded-3xl shadow-lg p-6 overflow-hidden cursor-pointer flex flex-col items-start justify-start hover:-translate-y-2 hover:scale-105 duration-300 group`}>
+    <div className={`relative w-full ${height ? 'h-[350px] md:h-[450px]' : 'min-h-[50px] lg:min-h-[215px]'} bg-white bg-opacity-80 rounded-3xl shadow-lg p-4 md:p-6 overflow-hidden cursor-pointer flex flex-col items-start justify-start hover:scale-105 duration-300 group`}>
       {/* Card Content */}
-      <h3 className={`font-bold mb-2 font-raleway ${main ? 'text-2xl lg:text-3xl' : 'text-lg'} z-10`}>{title}</h3>
-      <p className="text-gray-600 text-md z-10 hyphens-auto break-words">
+      <h3 className={`font-bold mb-2 font-raleway ${main ? 'text-xl lg:text-3xl' : 'text-lg md:text-xl'} z-10`}>{title}</h3>
+      <p className="text-gray-600 text-sm md:text-md z-10 hyphens-auto break-words">
         {description}
       </p>
 

@@ -16,7 +16,7 @@ export default function Services() {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                        className="text-5xl text-center md:text-5xl lg:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
+                        className="text-4xl text-center md:text-5xl lg:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
                         >
                         What I Do Best
                     </motion.h2>
@@ -24,7 +24,7 @@ export default function Services() {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-                        className="text-center text-lg flex items-center justify-end relative"
+                        className="text-md md:text-lg mb-4 text-center flex items-center justify-end relative"
                         >
                         Building high-performance web solutions using cutting-edge technologies for seamless user experiences.
                     </motion.p>

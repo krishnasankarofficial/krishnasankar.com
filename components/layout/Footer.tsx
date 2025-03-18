@@ -13,9 +13,9 @@ export default function Footer() {
         <footer ref={footerRef} className="w-full flex flex-col items-center justify-between bg-transparent pt-12">
             {footerInView && (
                 <div
-                    className="w-full flex flex-col items-center justify-between  bg-gradient-to-t from-black to-gray-800 rounded-t-[3rem] text-white px-12 pr-28 py-6 pt-14"
+                    className="w-full flex flex-col items-center justify-between  bg-gradient-to-t from-black to-gray-800 rounded-t-[3rem] text-white lg:px-12 lg:pr-28 py-6 pt-8 lg:pt-14"
                     >
-                    <div className="w-full flex flex-col text-center md:text-start lg:flex-row items-start justify-between">
+                    <div className="w-full flex flex-col text-center items-center md:text-start lg:flex-row justify-between">
                         <div 
                             className="flex flex-col"
                             >
@@ -28,7 +28,7 @@ export default function Footer() {
                                 <Logo size="lg" />
                             </motion.div>
                             <motion.div 
-                                className="flex flex-col gap-2"
+                                className="flex flex-col md:gap-2"
                                 initial={{ opacity: 0, y: -50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
@@ -49,7 +49,7 @@ export default function Footer() {
                                 </Link>
                             </motion.div>
                             <motion.p 
-                                className="mt-6 font-raleway font-semibold text-3xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent"
+                                className="mt-6 font-raleway font-semibold text-2xl lg:text-3xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent"
                                 initial={{ opacity: 0, y: -50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
@@ -60,12 +60,13 @@ export default function Footer() {
                                 initial={{ opacity: 0, y: -50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
-                                >Stan Lee, 1962</motion.span>
+                                >Stan Lee, 1962
+                            </motion.span>
                         </div>
-                        <div className="w-full md:w-1/2 flex flex-col items-start justify-center">
+                        <div className="w-full md:w-1/2 flex flex-col items-start justify-center mt-6 md:mt-0">
                             <div className="w-full flex items-start justify-between gap-4 md:gap-12 lg:gap-24">
                                 <motion.div 
-                                    className="w-full flex flex-col gap-2"
+                                    className="text-sm md:text-base w-full flex flex-col md:gap-2"
                                     initial={{ opacity: 0, y: -50 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
@@ -76,7 +77,7 @@ export default function Footer() {
                                     <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>Blogs</Link>
                                 </motion.div>
                                 <motion.div 
-                                    className="w-full flex flex-col gap-2"
+                                    className="text-sm md:text-base w-full flex flex-col md:gap-2"
                                     initial={{ opacity: 0, y: -50 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
@@ -88,7 +89,7 @@ export default function Footer() {
                                     <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>UI/UX</Link>
                                 </motion.div>
                                 <motion.div 
-                                    className="w-full flex flex-col gap-2"
+                                    className="text-sm md:text-base w-full flex flex-col md:gap-2"
                                     initial={{ opacity: 0, y: -50 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
@@ -104,7 +105,7 @@ export default function Footer() {
                     <div className="w-full h-[1px] bg-white opacity-20 rounded-full my-4"></div>
                     <div className="w-full flex flex-col md:flex-row text-center items-center justify-between">
                         <motion.div 
-                            className="flex-1 flex items-center justify-between gap-4"
+                            className="text-sm flex-1 flex items-center justify-between gap-4 mb-2 md:mb-0"
                             initial={{ opacity: 0, y: -50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}

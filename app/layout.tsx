@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${workSans.variable} ${raleway.variable} ${sofia.variable} ${anthony.variable} antialiased font-work_sans relative overflow-x-hidden flex flex-col w-screen h-screen`} 
+        className={`${workSans.variable} ${raleway.variable} ${sofia.variable} ${anthony.variable} antialiased font-work_sans relative overflow-x-hidden flex flex-col w-screen min-h-screen`} 
       >
         <div className="w-full h-full fixed top-0 left-0 bg-gradient-to-l from-green-400 to-cyan-400 -z-10 rounded-xl "></div>
         <Header />
