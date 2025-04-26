@@ -31,13 +31,13 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
             className="text-lg md:text-2xl font-bold  max-w-2xl mt-4"
           >
-            Your go-to Digital Partner
+            Your Trusted Digital Partner
           </motion.span>
           <motion.span
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-            className="text-lg md:text-xl mt-4"
+            className="text-lg md:text-xl xl:mt-8 mt-4"
           >
             Still thinking about it? Let&apos;s be real, your website won&apos;t build itself.
           </motion.span>
@@ -47,7 +47,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8, y: -30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
-            className="mt-6 flex gap-4"
+            className="xl:mt-12 mt-6 flex gap-4"
           >
             <motion.div
               whileTap={{ scale: 0.8 }}
