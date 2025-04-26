@@ -13,9 +13,9 @@ export default function Footer() {
         <footer ref={footerRef} className="w-full flex flex-col items-center justify-between bg-transparent pt-12">
             {footerInView && (
                 <div
-                    className="w-full flex flex-col items-center justify-between  bg-gradient-to-t from-black to-gray-800 rounded-t-[3rem] text-white lg:px-12 lg:pr-28 py-6 pt-8 lg:pt-14"
+                    className="w-full flex flex-col items-center justify-between  bg-gradient-to-t from-black to-gray-900 rounded-t-[3rem] text-white lg:px-12 lg:pr-28 py-6 pt-8 lg:pt-14"
                     >
-                    <div className="w-full flex flex-col text-center items-center md:text-start lg:flex-row justify-between">
+                    <div className="w-full flex flex-col text-center items-start md:text-start lg:flex-row justify-between">
                         <div 
                             className="flex flex-col"
                             >
@@ -71,10 +71,18 @@ export default function Footer() {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
                                     >
-                                    <span className="font-bold font-raleway text-xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent">Links</span>
-                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>Home</Link>
-                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>About</Link>
-                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>Blogs</Link>
+                                    <span className="font-bold font-raleway xl:text-2xl text-xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent">
+                                        Links
+                                    </span>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
+                                        Home
+                                    </Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
+                                        About
+                                    </Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
+                                        Blogs
+                                    </Link>
                                 </motion.div>
                                 <motion.div 
                                     className="text-sm md:text-base w-full flex flex-col md:gap-2"
@@ -82,11 +90,21 @@ export default function Footer() {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
                                     >
-                                    <span className="font-bold font-raleway text-xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent">Services</span>
-                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>Website</Link>
-                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>E-Commerce</Link>
-                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>Maintenance</Link>
-                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>UI/UX</Link>
+                                    <span className="font-bold font-raleway xl:text-2xl text-xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent">
+                                        Services
+                                    </span>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
+                                        Website
+                                    </Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
+                                        E-Commerce
+                                    </Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
+                                        Maintenance
+                                    </Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
+                                        UI/UX
+                                    </Link>
                                 </motion.div>
                                 <motion.div 
                                     className="text-sm md:text-base w-full flex flex-col md:gap-2"
@@ -94,10 +112,18 @@ export default function Footer() {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
                                     >
-                                    <span className="font-bold font-raleway text-xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent">Legal</span>
-                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>Privacy</Link>
-                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>Terms of use</Link>
-                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>Cookies</Link>
+                                    <span className="font-bold font-raleway xl:text-2xl text-xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent">
+                                        Legal
+                                    </span>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
+                                        Privacy
+                                    </Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
+                                        Terms of use
+                                    </Link>
+                                    <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
+                                        Cookies
+                                    </Link>
                                 </motion.div>
                             </div>
                         </div>

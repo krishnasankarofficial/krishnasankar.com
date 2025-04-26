@@ -50,7 +50,8 @@ export default function FAQ() {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
-                        className="lg:mb-6 text-3xl md:text-5xl lg:text-6xl text-center font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent md:py-4"
+                        className="lg:mb-6 text-3xl md:text-5xl lg:text-6xl text-center font-extrabold font-limelight bg-gradient-to-r from-cyan-500 
+                        to-green-500 bg-clip-text text-transparent py-4"
                         >
                         Frequently Asked Questions
                     </motion.h2>
@@ -60,22 +61,25 @@ export default function FAQ() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 + index * 0.2 }} 
                             key={index} 
-                            className="relative w-full lg:w-4/5 flex flex-col items-start justify-between gap-2 md:gap-4 py-4 px-6 bg-white bg-opacity-20 rounded-3xl cursor-pointer duration-300"
+                            className="relative w-full lg:w-4/5 flex flex-col items-start justify-between gap-2 md:gap-4 
+                            xl:py-10 xl:px-12 py-4 px-6 overflow-hidden
+                            bg-gradient-to-t from-black to-gray-900 bg-opacity-20 rounded-3xl cursor-pointer duration-300"
                             onMouseDownCapture={handleFAQClick(index)}
                             >
                             <Image 
                                 src={'/images/down.png'}
-                                width={35}
-                                height={35}
+                                width={45}
+                                height={45}
                                 alt="Arrow up"
-                                className={`absolute top-4 right-4 transform ${faq.active ? 'rotate-180' : ''} duration-300`}
+                                className={`absolute -top-[1px] -right-[1px] transform ${faq.active ? 'rotate-180' : ''} duration-300 
+                                bg-gradient-to-tr from-cyan-400 to-green-400 rounded-full p-2`}
                             />
                             <div className="flex flex-col items-start gap-4">
                                 <p className="text-lg md:text-xl font-bold font-raleway leading-tight pr-6">{faq.question}</p>
                             </div>
                             {faq.active && (
                                 <div className="text-sm md:text-lg flex flex-col items-start gap-4 animate-dropDown">
-                                    <p>{faq.answer}</p>
+                                    <p className="text-gray-300">{faq.answer}</p>
                                 </div>
                             )}
                         </motion.div>

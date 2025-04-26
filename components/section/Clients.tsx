@@ -41,41 +41,18 @@ export default function Clients() {
     };
 
     return (
-        <section className="w-full h-full flex flex-col lg:flex-row items-start justify-between p-6 lg:py-12">
-            <div className="lg:w-2/5 h-full flex flex-col items-start justify-between">
-                <span className="text-3xl md:text-5xl lg:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent py-4">
+        <section className="w-full h-full flex flex-col lg:flex-row items-start justify-between gap-4 p-6 xl:my-24 lg:my-12">
+            <div className="xl:w-full h-full xl:text-start text-center flex flex-col items-center justify-center">
+                <span className="lg:text-6xl md:text-5xl text-3xl font-extrabold font-limelight  bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent py-4">
                     What my clients say about me?
                 </span>
-                <div className="w-full flex items-center justify-end lg:justify-start -translate-y-6 lg:translate-y-0 gap-2 lg:gap-4">
-                    <button
-                        onClick={handlePreviousClick}
-                        className="rotate-[200deg] bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center cursor-pointer hover:scale-110 active:scale-75"
-                    >
-                        <Image 
-                            src={'/images/arrow-up.png'}
-                            width={25}
-                            height={25}
-                            alt="Arrow up"
-                        />
-                    </button>
-                    <button
-                        onClick={handleNextClick}
-                        className="rotate-[20deg] bg-gradient-to-tl from-black to-gray-700 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center cursor-pointer hover:scale-110 active:scale-75"
-                    >
-                        <Image 
-                            src={'/images/arrow-up.png'}
-                            width={25}
-                            height={25}
-                            alt="Arrow up"
-                        />
-                    </button>
-                </div>
             </div>
-            <div className="w-full h-full overflow-hidden flex flex-col items-end justify-between gap-2 lg:gap-4">
+            <div className="w-full lg:h-96 h-64 overflow-hidden flex flex-col items-end justify-between gap-2 lg:gap-4">
                 {reviews.map((review, index) => (
                     <div 
                         key={index} 
-                        className={`lg:w-2/3 h-full ${currentReview === index ? 'flex' : 'hidden'} flex-col gap-2 lg:gap-6 bg-white rounded-3xl mt-4 p-4 lg:p-6 px-6 lg:px-8 bg-opacity-80 transition-opacity duration-1000 animate-slideUp`}
+                        className={`w-full h-full ${currentReview === index ? 'flex' : 'hidden'} flex-col gap-2 lg:gap-6 bg-gradient-to-t 
+                        from-black to-gray-900 rounded-3xl mt-4 p-4 lg:p-6 px-6 lg:px-8 bg-opacity-80 transition-opacity duration-1000 animate-slideUp`}
                     >
                         <div className="flex items-center justify-start gap-4">
                             <Image 
@@ -86,12 +63,36 @@ export default function Clients() {
                             />
                             <div className="flex flex-col items-start justify-start">
                                 <span className="font-bold text-2xl font-raleway">{review.client}</span>
-                                <span className="text-gray-700">{review.designation}</span>
+                                <span className="text-gray-400">{review.designation}</span>
                             </div>
                         </div>
                         <span className="text-sm md:text-lg text-pretty break-words hyphens-auto">{review.review}</span>
                     </div>
                 ))}
+                <div className="w-full flex items-center justify-end -translate-y-6 lg:translate-y-0 gap-2 lg:gap-4">
+                    <button
+                        onClick={handlePreviousClick}
+                        className="rotate-[200deg] bg-gradient-to-tr from-cyan-400 to-green-400 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center cursor-pointer hover:scale-110 active:scale-75"
+                    >
+                        <Image 
+                            src={'/images/black-arrow-up.png'}
+                            width={25}
+                            height={25}
+                            alt="Arrow up"
+                        />
+                    </button>
+                    <button
+                        onClick={handleNextClick}
+                        className="rotate-[20deg] bg-gradient-to-tr from-cyan-400 to-green-400 text-white rounded-full p-2 shadow-lg hover:bg-slate-800 transition duration-300 flex items-center justify-center cursor-pointer hover:scale-110 active:scale-75"
+                    >
+                        <Image 
+                            src={'/images/black-arrow-up.png'}
+                            width={25}
+                            height={25}
+                            alt="Arrow up"
+                        />
+                    </button>
+                </div>
             </div>
         </section>
     )

@@ -14,39 +14,27 @@ export default function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % works.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + works.length) % works.length);
-  };
-
   useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % works.length);
+    }, 2000);
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
       <div className="relative flex items-center justify-center w-full h-full">
-        <button
-          onClick={handlePrev}
-          className="absolute left-0 lg:left-16 -bottom-28 lg:top-1/2 -translate-y-1/2 z-40"
-        >
-          <Image 
-            src={'/images/right.png'}
-            width={80}
-            height={80}
-            alt="Right"
-            className="rotate-180 hover:scale-110 duration-300  hover:-translate-x-2"
-          />
-        </button>
         <AnimatePresence>
           {works.map((work, index) => {
             const position = index - currentIndex;
@@ -63,7 +51,7 @@ export default function Slider() {
             return (
               <motion.div
                 key={work.id}
-                className={`absolute w-[250px] lg:w-[500px] h-auto bg-white rounded-3xl shadow-lg flex items-center justify-center text-xl cursor-pointer object-cover`}
+                className={`absolute xl:w-[800px] lg:w-[500px] w-[250px]  h-auto bg-white rounded-3xl shadow-lg flex items-center justify-center text-xl cursor-pointer object-cover`}
                 initial={{ scale: 0.8, x: adjustedPosition * 200, opacity: 1 }}
                 animate={{
                   scale: scale,
@@ -73,29 +61,17 @@ export default function Slider() {
                 }}
                 transition={{ type: "spring", duration: 0.8, delay: 0.5 }}
               >
-                <Image 
-                    src={'/images/image.png'}
-                    width={1000}
-                    height={1000}
-                    alt="Work"
-                    className="w-full h-full rounded-3xl"
+                <Image
+                  src={'/images/image.png'}
+                  width={1000}
+                  height={1000}
+                  alt="Work"
+                  className="w-full h-full rounded-3xl"
                 />
               </motion.div>
             );
           })}
         </AnimatePresence>
-        <button
-          onClick={handleNext}
-          className="absolute right-0 lg:right-16 -bottom-28 lg:top-1/2 -translate-y-1/2 z-40"
-        >
-          <Image 
-            src={'/images/right.png'}
-            width={80}
-            height={80}
-            alt="Right"
-            className="hover:scale-110 duration-300 hover:translate-x-2"
-          />
-        </button>
       </div>
     </div>
   );

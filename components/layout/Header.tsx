@@ -18,12 +18,12 @@ export default function Header() {
                     initial={{ opacity: 0, y: -100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-                    className="relative w-[95%] md:w-2/3 lg:w-1/2 p-4 flex items-center justify-between rounded-full bg-transparent text-dark shadow-lg z-50 backdrop-blur-sm backdrop"
+                    className="relative w-[95%] md:w-2/3 lg:w-1/2 p-4 flex items-center justify-between rounded-full bg-black bg-opacity-40 shadow-lg z-50 backdrop-blur-sm backdrop"
                 >
                     <div className="w-1/3 flex items-center justify-start pl-2 gap-4">
                         <Image 
                             className="cursor-pointer hover:scale-110 duration-300 " 
-                            src={'/images/app.png'} 
+                            src={'/images/menu-gradient.png'} 
                             width={30} 
                             height={30} 
                             alt="Menu" 
@@ -49,7 +49,7 @@ export default function Header() {
                             >
                             <Link
                                 href={'/contact'} 
-                                className="text-sm md:text-md w-full text-center bg-gradient-to-t from-black to-gray-700 text-white cursor-pointer rounded-full font-semibold px-4 py-2 shadow-sm">
+                                className="text-xl font-limelight bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent md:text-md w-full text-center cursor-pointer rounded-full font-bold px-4 py-2 shadow-sm">
                                 Hire Me
                             </Link>
                         </motion.div>

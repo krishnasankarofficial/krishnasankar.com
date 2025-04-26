@@ -19,6 +19,8 @@ export default {
         raleway: "var(--font-raleway)",
         anthony: "var(--font-anthony)",
         sofia: "var(--font-sofia)",
+        limelight: "var(--font-limelight)",
+        poppins: "var(--font-poppins)",
       },
       animation: {
         'scale_n_glow': "scale_n_glow 2s ease-in-out forwards",

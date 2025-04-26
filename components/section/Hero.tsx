@@ -20,7 +20,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
+            className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-limelight bg-gradient-to-r from-cyan-500 to-green-500 bg-clip-text text-transparent"
           >
             It&apos;s me, Krishnasankar
           </motion.h1>
@@ -55,7 +55,7 @@ export default function Hero() {
               >
               <Link
                 href="/contact"
-                className="px-6 py-3 bg-transparent border border-black font-medium rounded-full hover:bg-gradient-to-t hover:from-black hover:to-gray-800 hover:text-white hover:scale-110 shadow-xl duration-300"
+                className="px-6 py-3 bg-transparent border border-black font-medium rounded-full hover:bg-gradient-to-t hover:from-black hover:to-gray-900 hover:text-white hover:scale-110 shadow-xl duration-300"
               >
                 Contact Me
               </Link>
@@ -66,7 +66,7 @@ export default function Hero() {
               >
               <Link
                 href="/portfolio"
-                className="px-6 py-3 bg-gradient-to-t from-black to-gray-800  text-white font-medium rounded-full hover:bg-black hover:scale-110 duration-300 shadow-xl"
+                className="px-6 py-3 bg-gradient-to-t from-cyan-400 to-green-400  text-dark font-extrabold rounded-full hover:bg-black hover:scale-110 duration-300 shadow-xl"
               >
                 View Portfolio
               </Link>
@@ -76,7 +76,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8, y: -30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.0, ease: "easeOut" }}
-            className="flex flex-col gap-2 items-center justify-center mt-12">
+            className="flex flex-col gap-2 items-center justify-center xl:mt-24 mt-12 animate-bounce">
             <span className='text-xl'>Scroll down</span>
             <Image 
               src={'/images/arrow-down.png'} 

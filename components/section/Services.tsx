@@ -9,14 +9,15 @@ export default function Services() {
     const servicesInView = useInView(ref, { once: true });
 
     return (
-        <section ref={ref} className="w-full flex flex-col items-center justify-center gap-4 lg:mt-12 h-full">
+        <section ref={ref} className="w-full flex flex-col items-center justify-center gap-4 xl:my-24 lg:my-12 h-full">
             {servicesInView && (
                 <>
                     <motion.h2
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                        className="text-4xl text-center md:text-5xl lg:text-6xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent"
+                        className="text-4xl text-center md:text-5xl lg:text-6xl font-extrabold font-limelight bg-gradient-to-r from-cyan-500 
+                        to-green-500 bg-clip-text text-transparent"
                         >
                         What I Do Best
                     </motion.h2>
@@ -38,8 +39,7 @@ export default function Services() {
                             <CardWithButton 
                                 title="Custom Websites" 
                                 description="Building fully responsive and fast websites using Next.js, React, or other modern frameworks tailored to your needs." 
-                                img="/images/web.png"
-                                height={500}
+                                img="/images/developer.png"
                                 main
                             />
                         </motion.div>
@@ -53,10 +53,12 @@ export default function Services() {
                                 <CardWithButton
                                     title="E-commerce Stores" 
                                     description="Create your online store easily with me." 
+                                    img="/images/ecommerce.png"
                                 />
                                 <CardWithButton 
                                     title="Optimization & SEO" 
                                     description="Boost site speed and rise to the top of search results." 
+                                    img="/images/rocket.png"
                                 />
                             </motion.div>
                             <motion.div 
@@ -68,10 +70,12 @@ export default function Services() {
                                 <CardWithButton 
                                     title="Maintenance & Support" 
                                     description="Keep sites up to date & secure." 
+                                    img="/images/support.png"
                                 />
                                 <CardWithButton 
                                     title="UI/UX Design & Prototyping" 
                                     description="Designing and prototyping engaging interfaces." 
+                                    img="/images/design.png"
                                 />
                             </motion.div>
                         </div>

@@ -146,7 +146,7 @@ export default function Megamenu() {
                     <Link
                         href={item.url}
                         key={i}
-                        className={`cursor-pointer w-full h-full flex-col p-4 bg-white bg-opacity-80 rounded-2xl shadow-sm ${activeItem === item.name ? 'bg-opacity-100 bg-gradient-to-t from-black to-gray-800 text-white' : ''}`}
+                        className={`cursor-pointer w-full h-full flex-col p-4 bg-white bg-opacity-80 rounded-2xl shadow-sm ${activeItem === item.name ? 'bg-opacity-100 bg-gradient-to-t from-black to-gray-900 text-white' : ''}`}
                         onMouseEnter={() => handleMouseEnter(item.name)}
                         onClick={() => handleClick(item.name)}
                     >
