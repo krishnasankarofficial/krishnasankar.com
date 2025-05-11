@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/components/ui/Logo";
-import Megamenu from "@/components/ui/Megamenu";
+import SimpleMenu from "@/components/ui/SimpleMenu";
 import { useState } from "react";
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
                     initial={{ opacity: 0, y: -100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-                    className="relative w-[95%] md:w-2/3 lg:w-1/2 p-4 flex items-center justify-between rounded-full bg-black bg-opacity-40 shadow-lg z-50 backdrop-blur-sm backdrop"
+                    className="relative w-[95%] md:w-2/3 lg:w-1/2 p-4 flex items-center justify-between rounded-full bg-black bg-opacity-60 shadow-lg z-50 backdrop-blur-sm backdrop"
                 >
                     <div className="w-1/3 flex items-center justify-start pl-2 gap-4">
                         <Image 
@@ -53,13 +53,28 @@ export default function Header() {
             </header>
             {showMenu && (
                 <motion.div 
-                    className="absolute w-full h-full -bottom-10 z-50 left-0 px-32 pt-10 text-black"
+                    className="fixed w-full h-full top-0 z-50 left-0 text-black"
                     initial = {{ y: -150, opacity: 0.5 }}
-                    animate = {{ y: -55, opacity: 1 }}
+                    animate = {{ y: 0, opacity: 1 }}
                     transition = {{ duration: 0.3, ease: "easeOut" }}
-                    onMouseDownCapture={() => setShowMenu(!showMenu)}
-                    >
-                    <Megamenu />
+                >
+                    <div className="absolute top-6 right-10 z-50">
+                        <motion.button
+                            initial={{ rotate: 0 }}
+                            animate={{ rotate: showMenu ? 360 : 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="w-10 h-10 p-2 rounded-full flex items-center justify-center bg-gradient-to-tr from-cyan-500 to-green-500"
+                            onClick={() => setShowMenu(false)}
+                        >
+                            <Image 
+                                src={'/images/close.png'}
+                                width={100}
+                                height={100}
+                                alt="close-menu"
+                            />
+                        </motion.button>
+                    </div>
+                    <SimpleMenu setShowMenu={setShowMenu} />
                 </motion.div>
             )}
         </div>

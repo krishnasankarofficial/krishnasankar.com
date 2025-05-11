@@ -4,7 +4,6 @@ import localFont from 'next/font/local';
 import "../styles/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-// import Megamenu from "./ui/Megamenu";
 import GoToTop from "../components/ui/GoToTop";
 
 const workSans = Work_Sans({
@@ -67,10 +66,10 @@ export default function RootLayout({
       <body
         className={`
           ${workSans.variable} ${raleway.variable} ${sofia.variable} ${anthony.variable} ${limelight.variable} ${poppins.variable} 
-          antialiased font-poppins relative overflow-x-hidden flex flex-col w-screen min-h-screen text-gray-200
+          antialiased font-poppins relative overflow-x-hidden flex flex-col w-screen min-h-screen text-slate-200 
         `} 
       >
-        <div className="w-full h-full fixed top-0 left-0 bg-gradient-to-r from-black via-gray-900 to-black -z-10 rounded-xl "></div>
+        <div className="w-full h-full fixed top-0 left-0 bg-gradient-to-r from-black via-slate-900 to-black -z-10 rounded-xl "></div>
         <Header />
         <main className="flex-1">
           {children}

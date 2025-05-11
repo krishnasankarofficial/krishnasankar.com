@@ -29,7 +29,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-            className="text-lg md:text-2xl font-bold  max-w-2xl mt-4"
+            className="text-lg md:text-4xl font-bold  max-w-2xl mt-2"
           >
             Your Trusted Digital Partner
           </motion.span>
@@ -37,9 +37,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-            className="text-lg md:text-xl xl:mt-8 mt-4"
+            className="text-lg md:text-xl xl:mt-6 mt-4"
           >
-            Still thinking about it? Let&apos;s be real, your website won&apos;t build itself.
+            Still thinking about it? Your competitors aren&apos;t. <br />
+            Let&apos;s turn your vision into a powerful online presence.
           </motion.span>
 
           {/* CTA Buttons */}
@@ -55,8 +56,8 @@ export default function Hero() {
               >
               <Link
                 href="/contact"
-                className="px-6 py-3 bg-transparent border border-black rounded-full hover:bg-gradient-to-t hover:from-black 
-                hover:to-gray-900 hover:text-white hover:scale-110 shadow-xl duration-300 xl:text-xl text-base"
+                className="px-6 py-3 bg-transparent border border-black rounded-full hover:bg-gradient-to-t hover:from-slate-900
+                hover:to-slate-800 hover:text-white hover:scale-110 shadow-xl duration-300 xl:text-xl text-base"
               >
                 Contact Me
               </Link>
@@ -67,7 +68,7 @@ export default function Hero() {
               >
               <Link
                 href="/portfolio"
-                className="px-6 py-3 bg-gradient-to-t from-cyan-400 to-green-400  text-dark rounded-full hover:bg-black 
+                className="px-6 py-3 bg-gradient-to-t from-cyan-400 to-green-400  text-dark rounded-full 
                 hover:scale-110 duration-300 shadow-xl xl:text-xl text-base"
               >
                 View Portfolio

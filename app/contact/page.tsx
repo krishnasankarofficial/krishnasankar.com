@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <section className="relative w-screen h-screen flex items-start justify-center gap-4 px-10 md:px-32 lg:px-40 py-48">
         <div className="flex-1 h-full flex flex-col items-start justify-between gap-2">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-raleway bg-gradient-to-b from-slate-700 to-black bg-clip-text text-transparent">
                 Get in Touch With Me
             </h1>
             <span className="text-xl font-bold mb-4">Let&apos;s Build Something Great Together!</span>
@@ -32,7 +32,7 @@ export default function ContactPage() {
                         <Link 
                             target="_blank" 
                             href={'https://www.instagram.com/ki.chu____'}
-                            className="bg-gradient-to-t from-black to-gray-700 p-2 rounded-xl text-white flex items-center justify-center text-sm hover:-translate-y-1 duration-300 active:scale-90"
+                            className="bg-gradient-to-t from-slate-900 to-slate-800 p-2 rounded-xl text-white flex items-center justify-center text-sm hover:-translate-y-1 duration-300 active:scale-90"
                             >
                             <Instagram style={{fontSize:20}}/>
                         </Link>
@@ -41,7 +41,7 @@ export default function ContactPage() {
                         <Link 
                             target="_blank" 
                             href={'https://www.facebook.com/krishna.sankar.587/'}
-                            className="bg-gradient-to-t from-black to-gray-700 p-2 rounded-xl text-white flex items-center justify-center text-sm hover:-translate-y-1 duration-300 active:scale-90"
+                            className="bg-gradient-to-t from-slate-900 to-slate-800 p-2 rounded-xl text-white flex items-center justify-center text-sm hover:-translate-y-1 duration-300 active:scale-90"
                             >
                             <Facebook style={{fontSize:20}}/>
                         </Link>
@@ -50,7 +50,7 @@ export default function ContactPage() {
                         <Link 
                             target="_blank" 
                             href={'https://wa.me/+917306310132'}
-                            className="bg-gradient-to-t from-black to-gray-700 p-2 rounded-xl text-white flex items-center justify-center text-sm hover:-translate-y-1 duration-300 active:scale-90"
+                            className="bg-gradient-to-t from-slate-900 to-slate-800 p-2 rounded-xl text-white flex items-center justify-center text-sm hover:-translate-y-1 duration-300 active:scale-90"
                             >
                             <WhatsApp style={{fontSize:20}}/>
                         </Link>
@@ -59,20 +59,20 @@ export default function ContactPage() {
             </div>
         </div>
         <form action={''} className="flex-1 h-full flex flex-col items-start justify-between gap-4">
-            <h2 className="mb-6 text-3xl md:text-4xl lg:text-5xl font-extrabold font-raleway bg-gradient-to-b from-gray-700 to-black bg-clip-text text-transparent">
+            <h2 className="mb-6 text-3xl md:text-4xl lg:text-5xl font-extrabold font-raleway bg-gradient-to-b from-slate-700 to-black bg-clip-text text-transparent">
                 Fill in the blanks
             </h2>
             <label className="flex flex-row gap-2 w-full">
                 My name is 
                 <input 
-                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-gray-700 flex-1" 
+                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-slate-700 flex-1" 
                     type="text" 
                     name="firstname" 
                     id="firstname" 
                     placeholder="First name*" 
                     required /> 
                 <input 
-                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-gray-700 flex-1" 
+                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-slate-700 flex-1" 
                     type="text" 
                     name="lastname" 
                     id="lastname" 
@@ -82,7 +82,7 @@ export default function ContactPage() {
             <label className="flex flex-row gap-2 w-full">
                 I&apos;m from 
                 <input 
-                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-gray-700 flex-1" 
+                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-slate-700 flex-1" 
                     type="text" 
                     name="company" 
                     id="company" 
@@ -91,7 +91,7 @@ export default function ContactPage() {
             <label className="flex flex-row gap-2 w-full">
                 Here is my Email ID
                 <input 
-                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-gray-700 flex-1" 
+                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-slate-700 flex-1" 
                     type="email" 
                     name="email" 
                     id="email" 
@@ -101,7 +101,7 @@ export default function ContactPage() {
             <label className="flex flex-row gap-2 w-full">
                 Here is my Phone Number
                 <input 
-                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-gray-700 flex-1" 
+                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-slate-700 flex-1" 
                     type="phone" 
                     name="phone" 
                     id="phone" 
@@ -110,7 +110,7 @@ export default function ContactPage() {
             <label className="flex flex-row gap-2 w-full">
                 I would like to discuss about
                 <input 
-                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-gray-700 flex-1" 
+                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-slate-700 flex-1" 
                     type="text" 
                     name="subject" 
                     id="subject" 
@@ -120,14 +120,14 @@ export default function ContactPage() {
                 Here is my message
                 <input
                     type="text" 
-                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-gray-700 flex-1" 
+                    className="bg-transparent outline-none ring-0 focus:outline-none border-b border-dashed border-black placeholder:text-slate-700 flex-1" 
                     name="message" 
                     id="message" 
                     placeholder="Message"
                 ></input>
             </label>
             <label className="flex flex-row gap-2 w-full mt-6">
-                <button type="submit" className="flex-1 px-6 py-3 font-medium rounded-2xl bg-gradient-to-t from-black to-gray-700 text-white hover:scale-105 active:scale-90 shadow-xl duration-300">
+                <button type="submit" className="flex-1 px-6 py-3 font-medium rounded-2xl bg-gradient-to-t from-slate-900 to-slate-800 text-white hover:scale-105 active:scale-90 shadow-xl duration-300">
                     Send Message
                 </button>    
             </label>

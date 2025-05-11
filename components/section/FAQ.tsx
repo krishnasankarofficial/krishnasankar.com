@@ -63,7 +63,7 @@ export default function FAQ() {
                             key={index} 
                             className="relative w-full lg:w-4/5 flex flex-col items-start justify-between gap-2 md:gap-4 
                             xl:py-10 xl:px-12 py-4 px-6 overflow-hidden
-                            bg-gradient-to-t from-black to-gray-900 bg-opacity-20 rounded-3xl cursor-pointer duration-300"
+                            bg-gradient-to-t from-slate-900 to-slate-800 rounded-3xl cursor-pointer duration-300"
                             onMouseDownCapture={handleFAQClick(index)}
                             >
                             <Image 
@@ -71,7 +71,7 @@ export default function FAQ() {
                                 width={45}
                                 height={45}
                                 alt="Arrow up"
-                                className={`absolute -top-[1px] -right-[1px] transform ${faq.active ? 'rotate-180' : ''} duration-300 
+                                className={`absolute -top-[1px] -right-[1px] transform ${faq.active ? 'rotate-90' : '-rotate-90'} duration-300 
                                 bg-gradient-to-tr from-cyan-400 to-green-400 rounded-full p-2`}
                             />
                             <div className="flex flex-col items-start gap-4">
@@ -79,7 +79,7 @@ export default function FAQ() {
                             </div>
                             {faq.active && (
                                 <div className="text-sm md:text-lg flex flex-col items-start gap-4 animate-dropDown">
-                                    <p className="text-gray-300">{faq.answer}</p>
+                                    <p className="text-slate-300">{faq.answer}</p>
                                 </div>
                             )}
                         </motion.div>

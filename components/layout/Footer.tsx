@@ -13,7 +13,7 @@ export default function Footer() {
         <footer ref={footerRef} className="w-full flex flex-col items-center justify-between bg-transparent pt-12">
             {footerInView && (
                 <div
-                    className="w-full flex flex-col items-center justify-between  bg-gradient-to-t from-black to-gray-900 rounded-t-[3rem] text-white lg:px-12 lg:pr-28 py-6 pt-8 lg:pt-14"
+                    className="w-full flex flex-col items-center justify-between  bg-gradient-to-t from-slate-900 to-slate-800 rounded-t-[3rem] text-white lg:px-12 lg:pr-28 py-6 pt-8 lg:pt-14"
                     >
                     <div className="w-full flex flex-col text-center items-start md:text-start lg:flex-row justify-between">
                         <div 
@@ -72,7 +72,7 @@ export default function Footer() {
                                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
                                     >
                                     <span className="font-bold font-raleway xl:text-2xl text-xl bg-gradient-to-tr from-green-500 to-cyan-500 bg-clip-text text-transparent">
-                                        Links
+                                        Navigation
                                     </span>
                                     <Link className="hover:translate-x-1 hover:bg-gradient-to-tr from-green-500 to-cyan-500 hover:bg-clip-text hover:text-transparent duration-300" href={'#'}>
                                         Home
