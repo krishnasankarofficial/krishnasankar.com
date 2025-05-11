@@ -55,7 +55,8 @@ export default function Hero() {
               >
               <Link
                 href="/contact"
-                className="px-6 py-3 bg-transparent border border-black font-medium rounded-full hover:bg-gradient-to-t hover:from-black hover:to-gray-900 hover:text-white hover:scale-110 shadow-xl duration-300"
+                className="px-6 py-3 bg-transparent border border-black rounded-full hover:bg-gradient-to-t hover:from-black 
+                hover:to-gray-900 hover:text-white hover:scale-110 shadow-xl duration-300 xl:text-xl text-base"
               >
                 Contact Me
               </Link>
@@ -66,7 +67,8 @@ export default function Hero() {
               >
               <Link
                 href="/portfolio"
-                className="px-6 py-3 bg-gradient-to-t from-cyan-400 to-green-400  text-dark font-extrabold rounded-full hover:bg-black hover:scale-110 duration-300 shadow-xl"
+                className="px-6 py-3 bg-gradient-to-t from-cyan-400 to-green-400  text-dark rounded-full hover:bg-black 
+                hover:scale-110 duration-300 shadow-xl xl:text-xl text-base"
               >
                 View Portfolio
               </Link>

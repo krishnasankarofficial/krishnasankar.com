@@ -27,12 +27,7 @@ export default function Header() {
                             width={30} 
                             height={30} 
                             alt="Menu" 
-                            onMouseEnter={() => setShowMenu(true)}
-                            onMouseLeave={(e) => {
-                                if (!e.relatedTarget || !(e.relatedTarget as Element).closest('.megamenu')) {
-                                    setShowMenu(false);
-                                }
-                            }}
+                            onMouseDownCapture={() => setShowMenu(!showMenu)}
                             />
                     </div>
                     <motion.div 
@@ -58,12 +53,11 @@ export default function Header() {
             </header>
             {showMenu && (
                 <motion.div 
-                    className="absolute w-full h-full -bottom-10 z-50 left-0 px-32 pt-10 text-black megamenu"
-                    initial = {{ y: -50, scale: 0.5 }}
-                    animate = {{ y: 0, scale: 1 }}
+                    className="absolute w-full h-full -bottom-10 z-50 left-0 px-32 pt-10 text-black"
+                    initial = {{ y: -150, opacity: 0.5 }}
+                    animate = {{ y: -55, opacity: 1 }}
                     transition = {{ duration: 0.3, ease: "easeOut" }}
-                    onMouseEnter={() => setShowMenu(true)}
-                    onMouseLeave={() => setShowMenu(false)}
+                    onMouseDownCapture={() => setShowMenu(!showMenu)}
                     >
                     <Megamenu />
                 </motion.div>
